@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Docker run MSSQL Server Linux</title><link rel="shortcut icon" href="/images/avatar.png"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"><script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script></head><body><nav class="main-nav"><a href="/">Home</a><a href="/archives">Archives</a></nav><div class="profile"><section id="wrapper"><header id="header"><a href="/about"><img class="2x" id="avatar" src="/images/avatar.png"></a><h1>Messy Thinking</h1><h2></h2></header></section></div><section class="post" id="wrapper"><article><header><h1>Docker run MSSQL Server Linux</h1><h2 class="headline">9月 29, 2018 8:44·
+98 words
+·
+1 minutes read<span class="tags"></span></h2></header><div id="toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pull"><span class="toc-text">pull</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#run"><span class="toc-text">run</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#modify-sa-password"><span class="toc-text">modify sa password</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#restart-or-start-if-your-server-has-stop"><span class="toc-text">restart (or start if your server has stop)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#check-status"><span class="toc-text">check status</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#as-last"><span class="toc-text">as last</span></a></li></ol></div><section id="post-body"><h1 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h1><blockquote>
+<p>docker pull microsoft/mssql-server-linux</p>
+</blockquote>
+<h1 id="run"><a href="#run" class="headerlink" title="run"></a>run</h1><blockquote>
+<p>docker run -e ‘ACCEPT_EULA=Y’ -e ‘SA_PASSWORD=<yourstrong!password>‘ \<br>   -p 1433:1433 –name docker-sql-server -d microsoft/mssql-server-linux</yourstrong!password></p>
+</blockquote>
+<p><em>dont modify above string</em> <code>&lt;YourStrong!PasswOrd&gt;</code></p>
+<h1 id="modify-sa-password"><a href="#modify-sa-password" class="headerlink" title="modify sa password"></a>modify sa password</h1><blockquote>
+<p>docker exec -it docker-sql-server /opt/mssql-tools/bin/sqlcmd \<br>   -S localhost -U SA -P ‘<yourstrong!password>‘ \<br>   -Q ‘ALTER LOGIN SA WITH PASSWORD=”YourNewStrong!PasswOrd”‘</yourstrong!password></p>
+</blockquote>
+<p><em>you should replace </em> <code>YourNewStrong!PasswOrd</code> <em>with your password</em></p>
+<h1 id="restart-or-start-if-your-server-has-stop"><a href="#restart-or-start-if-your-server-has-stop" class="headerlink" title="restart (or start if your server has stop)"></a><del>restart (or start if your server has stop)</del></h1><blockquote>
+<p><del>docker restart docker-sql-server</del></p>
+</blockquote>
+<h1 id="check-status"><a href="#check-status" class="headerlink" title="check status"></a>check status</h1><blockquote>
+<p>docker ps -a</p>
+</blockquote>
+<h1 id="as-last"><a href="#as-last" class="headerlink" title="as last"></a>as last</h1><blockquote>
+<p>connect server with <code>sql operations studio</code> or <code>navicat</code></p>
+</blockquote>
+</section><nav id="post-nav"><span class="prev"></span><span class="next"><a href="/2018/09/29/SQL-Server-Migration/">Older Posts<span class="arrow">→</span></a></span></nav></article></section><footer id="footer"><div id="social"><a class="symbol" href="https://github.com/qomg"><i class="fa fa-github"></i></a></div><p class="small">© Copyright 2018 &nbsp;<i class="fa fa-heart" aria-hidden="true">&nbsp;Dxx</i></p><p class="small">Powered by &nbsp;<a href="https://hexo.io/">Hexo &nbsp;</a>Theme By &nbsp;<a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx &nbsp;</a></p></footer><script>hljs.initHighlightingOnLoad();</script></body></html>

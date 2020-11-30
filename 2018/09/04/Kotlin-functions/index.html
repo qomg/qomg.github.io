@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kotlin functions</title><link rel="shortcut icon" href="/images/avatar.png"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"><script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script></head><body><nav class="main-nav"><a href="/">Home</a><a href="/archives">Archives</a></nav><div class="profile"><section id="wrapper"><header id="header"><a href="/about"><img class="2x" id="avatar" src="/images/avatar.png"></a><h1>Messy Thinking</h1><h2></h2></header></section></div><section class="post" id="wrapper"><article><header><h1>Kotlin functions</h1><h2 class="headline">9月 04, 2018 9:10·
+174 words
+·
+1 minutes read<span class="tags"></span></h2></header><section id="post-body"><p><a href="https://kotlinlang.org/docs/reference/lambdas.html" target="_blank" rel="external">Kotlin functions</a></p>
+<p>1、function member<br>val onClick: () -&gt; Unit = …</p>
+<p>2、nullable function<br>val intFunc: ((Int, Int) -&gt; Int)? = null</p>
+<p>3、function type<br>typealias ClickHandler = (Button, ClickEvent) -&gt; Unit</p>
+<p>4、anonymous function<br>fun(s: String): Int { return s.toIntOrNull() ?: 0 }</p>
+<p>5、lamda expression<br>val reminderFunc = { index: Int -&gt; index % 2 }</p>
+<p>6、callable reference<br>member function   ::toString, String::toInt<br>member property  List<int>::size<br>constructor            ::someConstructorFuncName</int></p>
+<p>7、class function<br>class IntTransformer: (Int) -&gt; Int {<br>      override operator fun invoke(x: Int): Int = TODO()<br>}<br>val intFunction: (Int) -&gt; Int = IntTransformer()</p>
+<p> 8、instance function<br>val repeatFun: String.(Int) -&gt; String = { times -&gt;<br>    this.repeat(times)<br>}<br>val twoParameters: (String, Int) -&gt; String = repeatFun<br>val s1 = repeatFun(“str”, 2)<br>val s2 = “str”.repeatFun(2)</p>
+<p>9、builder function<br>class HTML {<br>    fun body() { … }<br>}</p>
+<p>fun html(init: HTML.() -&gt; Unit): HTML {<br>    val html = HTML()  // create the receiver object<br>    html.init()        // pass the receiver object to the lambda<br>    return html<br>}</p>
+<p>val obj = html {       // lambda with receiver begins here<br>    body()   // calling a method on the receiver object<br>}</p>
+<p>10、infix function<br>class HTML {<br>    infix fun escape(escaper: (String) -&gt; String){…}<br>}<br>val obj = HTML() escape { s: String -&gt; “switch s case xxx”}</p>
+</section><nav id="post-nav"><span class="prev"><a href="/2018/09/04/dart-form/"><span class="arrow">←</span>Newer Posts</a></span><span class="next"><a href="/2018/09/04/IDEA-jetty-run/">Older Posts<span class="arrow">→</span></a></span></nav></article></section><footer id="footer"><div id="social"><a class="symbol" href="https://github.com/qomg"><i class="fa fa-github"></i></a></div><p class="small">© Copyright 2018 &nbsp;<i class="fa fa-heart" aria-hidden="true">&nbsp;Dxx</i></p><p class="small">Powered by &nbsp;<a href="https://hexo.io/">Hexo &nbsp;</a>Theme By &nbsp;<a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx &nbsp;</a></p></footer><script>hljs.initHighlightingOnLoad();</script></body></html>
