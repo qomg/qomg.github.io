@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Gitlab - Use Emoji in Commit Message | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Gitlab - Use Emoji in Commit Message</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2021.11.10"><i class="far fa-calendar-alt"></i> 2021.11.10</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+      </div>
+     
+    
+      <div class="post-meta-item categories">
+        
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/gitlab/">gitlab</a>
+        
+      </div>
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">335 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h2 id="commit-message-格式如下"><a href="#commit-message-格式如下" class="headerlink" title="commit message 格式如下"></a>commit message 格式如下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:emoji: 主题</span><br><span class="line"></span><br><span class="line">提交信息主体</span><br><span class="line"></span><br><span class="line">Ref &lt;###&gt;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>初次提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;:tada: Initialize Repo&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="emoji说明"><a href="#emoji说明" class="headerlink" title="emoji说明"></a>emoji说明</h2><table>
+<thead>
+<tr>
+<th>emoji</th>
+<th>emoji 代码</th>
+<th>commit 说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:art: (调色板)</td>
+<td>:art:</td>
+<td>改进代码结构/代码格式</td>
+</tr>
+<tr>
+<td>:fire: (火焰)</td>
+<td>:fire:</td>
+<td>移除代码或文件</td>
+</tr>
+<tr>
+<td>:bug: (bug)</td>
+<td>:bug:</td>
+<td>修复 bug</td>
+</tr>
+<tr>
+<td>:ambulance: (急救车)</td>
+<td>:ambulance:</td>
+<td>重要补丁</td>
+</tr>
+<tr>
+<td>:sparkles: (火花)</td>
+<td>:sparkles:</td>
+<td>引入新功能</td>
+</tr>
+<tr>
+<td>:memo: (备忘录)</td>
+<td>:memo:</td>
+<td>撰写文档</td>
+</tr>
+<tr>
+<td>:rocket: (火箭)</td>
+<td>:rocket:</td>
+<td>部署功能</td>
+</tr>
+<tr>
+<td>:lipstick: (口红)</td>
+<td>:lipstick:</td>
+<td>更新 UI 和样式文件</td>
+</tr>
+<tr>
+<td>:tada: (庆祝)</td>
+<td>:tada:</td>
+<td>初次提交</td>
+</tr>
+<tr>
+<td>:white_check_mark: (白色复选框)</td>
+<td>:white_check_mark:</td>
+<td>增加测试</td>
+</tr>
+<tr>
+<td>:lock: (锁)</td>
+<td>:lock:</td>
+<td>修复安全问题</td>
+</tr>
+<tr>
+<td>:apple: (苹果)</td>
+<td>:apple:</td>
+<td>修复 macOS 下的问题</td>
+</tr>
+<tr>
+<td>:penguin: (企鹅)</td>
+<td>:penguin:</td>
+<td>修复 Linux 下的问题</td>
+</tr>
+<tr>
+<td>:checkered_flag: (旗帜)</td>
+<td>:checked_flag:</td>
+<td>修复 Windows 下的问题</td>
+</tr>
+<tr>
+<td>:bookmark: (书签)</td>
+<td>:bookmark:</td>
+<td>发行/版本标签</td>
+</tr>
+<tr>
+<td>:rotating_light: (警车灯)</td>
+<td>:rotating_light:</td>
+<td>移除 linter 警告</td>
+</tr>
+<tr>
+<td>:construction: (施工)</td>
+<td>:construction:</td>
+<td>工作进行中</td>
+</tr>
+<tr>
+<td>:green_heart: (绿心)</td>
+<td>:green_heart:</td>
+<td>修复 CI 构建问题</td>
+</tr>
+<tr>
+<td>:arrow_down: (下降箭头)</td>
+<td>:arrow_down:</td>
+<td>降级依赖</td>
+</tr>
+<tr>
+<td>:arrow_up: (上升箭头)</td>
+<td>:arrow_up:</td>
+<td>升级依赖</td>
+</tr>
+<tr>
+<td>:construction_worker: (工人)</td>
+<td>:construction_worker:</td>
+<td>添加 CI 构建系统</td>
+</tr>
+<tr>
+<td>:chart_with_upwards_trend: (上升趋势图)</td>
+<td>:chart_with_upwards_trend:</td>
+<td>添加分析或跟踪代码</td>
+</tr>
+<tr>
+<td>:hammer: (锤子)</td>
+<td>:hammer:</td>
+<td>重大重构</td>
+</tr>
+<tr>
+<td>:heavy_minus_sign: (减号)</td>
+<td>:heavy_minus_sign:</td>
+<td>减少一个依赖</td>
+</tr>
+<tr>
+<td>:whale: (鲸鱼)</td>
+<td>:whale:</td>
+<td>Docker 相关工作</td>
+</tr>
+<tr>
+<td>:heavy_plus_sign: (加号)</td>
+<td>:heavy_plug_sign:</td>
+<td>增加一个依赖</td>
+</tr>
+<tr>
+<td>:wrench: (扳手)</td>
+<td>:wrench:</td>
+<td>修改配置文件</td>
+</tr>
+<tr>
+<td>:globe_with_meridians: (地球)</td>
+<td>:globe_with_meridians:</td>
+<td>国际化与本地化</td>
+</tr>
+<tr>
+<td>:pencil2: (铅笔)</td>
+<td>:pencil2:</td>
+<td>修复 typo</td>
+</tr>
+</tbody></table>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2021/11/10/gitlab-emoji/">http://qomg.github.io/2021/11/10/gitlab-emoji/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/emoji/" class="tag">emoji</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/10/ml-kit/" >Ml-Kit<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2020/12/30/SQLServerUUID/" >SQL Server UUID<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>

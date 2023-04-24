@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Flutter UME Tutorial | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Flutter UME Tutorial</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2021.11.14"><i class="far fa-calendar-alt"></i> 2021.11.14</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+      </div>
+     
+    
+      <div class="post-meta-item categories">
+        
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/flutter/">flutter</a>
+        
+      </div>
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">405 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h1 id="Flutter应用内调试工具UME上手"><a href="#Flutter应用内调试工具UME上手" class="headerlink" title="Flutter应用内调试工具UME上手"></a>Flutter应用内调试工具UME上手</h1><p><img src= "/img/loading.gif" data-src="/images/ume-banner.png"></p>
+<span id="more"></span>
+
+<h2 id="组件地址"><a href="#组件地址" class="headerlink" title="组件地址"></a>组件地址</h2><p>Pub 地址：</p>
+<p><a target="_blank" rel="noopener" href="https://pub.dev/packages/flutter_ume">https://pub.dev/packages/flutter_ume</a><br><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/flutter_ume">https://pub.flutter-io.cn/packages/flutter_ume</a></p>
+<p>GitHub 地址：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bytedance/flutter_ume">https://github.com/bytedance/flutter_ume</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>UME (读音：油米~) 是一个 Flutter 调试工具包，内部集成了丰富的调试小工具，设计UI、网络、监控、性能、logger 等，无论是研发、PM、还是 QA 均能使用。</p>
+<ul>
+<li><p>方便PM 、设计、 QA在验收过程中，查看页面内容尺寸、颜色、对齐，反馈时提供设备信息、日志等。</p>
+</li>
+<li><p>方便开发者调试时查看组件信息、组件渲染树、快速CodeReview、性能表现、查看内存、CPU信息等。</p>
+</li>
+</ul>
+<img src= "/img/loading.gif" data-src="/images/ume-panel.png" alt="功能截图" style="zoom:50%;" />
+
+
+
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="WidgetInfo"><a href="#WidgetInfo" class="headerlink" title="WidgetInfo"></a>WidgetInfo</h3><p>查看当前选中 widget 的名称、尺寸、源码路径及所在行</p>
+<img src= "/img/loading.gif" data-src="/images/ume-widget-info.png" alt="ume-widget-info" style="zoom:50%;" />
+
+
+
+<h3 id="WidgetDetail"><a href="#WidgetDetail" class="headerlink" title="WidgetDetail"></a>WidgetDetail</h3><p>查看当前选中 widget 的树层级，以及它 renderObject 的详细 build 链</p>
+<img src= "/img/loading.gif" data-src="/images/ume-widget-detail-chain.png" alt="ume-widget-detail-chain" style="zoom:50%;" />
+
+<img src= "/img/loading.gif" data-src="/images/ume-widget-detail-desc.png" alt="ume-widget-detail-desc" style="zoom:50%;" />
+
+
+
+<h3 id="ColorSucker"><a href="#ColorSucker" class="headerlink" title="ColorSucker"></a>ColorSucker</h3><p>查看到当前页面任何像素的颜色，方便调试 UI。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-color-sucker.png" alt="ume-color-sucker" style="zoom:50%;" />
+
+
+
+<h3 id="AlignRuler"><a href="#AlignRuler" class="headerlink" title="AlignRuler"></a>AlignRuler</h3><p>测量当前 widget 所在屏幕的一个坐标位置，开启吸附开关后可以自动吸附最近 widget。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-align-ruler.png" alt="ume-align-ruler" style="zoom:50%;" />
+
+
+
+<h3 id="PerfOverlay"><a href="#PerfOverlay" class="headerlink" title="PerfOverlay"></a>PerfOverlay</h3><p>性能图层，raster 线程的性能情况在上面，UI 线程显示在下面。垂直的绿色条条代表的是当前帧。</p>
+<blockquote>
+<p>更多内容请参考 <a target="_blank" rel="noopener" href="https://flutter.cn/docs/perf/rendering/ui-performance">Flutter官方-性能分析</a></p>
+</blockquote>
+<img src= "/img/loading.gif" data-src="/images/ume-perf-overlay.png" alt="ume-perf-overlay" style="zoom:50%;" />
+
+
+
+<h3 id="ShowCode"><a href="#ShowCode" class="headerlink" title="ShowCode"></a>ShowCode</h3><p>查看到当前页面的页面代码。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-show-code.png" alt="ume-show-code" style="zoom:50%;" />
+
+
+
+<h3 id="MemoryInfo"><a href="#MemoryInfo" class="headerlink" title="MemoryInfo"></a>MemoryInfo</h3><p>查看当前Dart VM 对象所占用情况。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-memory-info.png" alt="ume-memory-info" style="zoom:50%;" />
+
+
+
+<h3 id="CPUInfo"><a href="#CPUInfo" class="headerlink" title="CPUInfo"></a>CPUInfo</h3><p>查看当前Dart VM 对象所占用情况。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-cpu-info.png" alt="ume-cpu-info" style="zoom:50%;" />
+
+
+
+<h3 id="DeviceInfo"><a href="#DeviceInfo" class="headerlink" title="DeviceInfo"></a>DeviceInfo</h3><p>查看当前设备具体信息，名称、系统版本、是否真实设备、内核版本。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-device-info.png" alt="ume-device-info" style="zoom:50%;" />
+
+
+
+<h3 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h3><p>展示使用 <code>debugPrint</code> 函数打印的日志。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-console.png" alt="ume-console" style="zoom:50%;" />
+
+
+
+<h3 id="DioInspector"><a href="#DioInspector" class="headerlink" title="DioInspector"></a>DioInspector</h3><p>查看 <code>dio</code> 网络请求的日志。</p>
+<img src= "/img/loading.gif" data-src="/images/ume-dio-inspector.png" alt="ume-dio-inspector" style="zoom:50%;" />
+
+
+
+<h3 id="自研组件"><a href="#自研组件" class="headerlink" title="自研组件"></a><a href="../custom-plugin">自研组件</a></h3><img src= "/img/loading.gif" data-src="/images/ume-analysis.png" alt="ume-analysis" style="zoom:50%;" />
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>TODO</p>
+</blockquote>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2021/11/14/Flutter-UME-tutorial/">http://qomg.github.io/2021/11/14/Flutter-UME-tutorial/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/ume/" class="tag">ume</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2022/12/19/flutter-learning/" >Flutter进阶学习<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/14/custom-plugin/" >Flutter Ume Custom Plugin<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>

@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Android Tools Namespace | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Android Tools Namespace</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2021.11.10"><i class="far fa-calendar-alt"></i> 2021.11.10</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+      </div>
+     
+    
+      <div class="post-meta-item categories">
+        
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Android/">Android</a>
+        
+      </div>
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">745 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">3 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h1 id="Tools命名空间属性说明"><a href="#Tools命名空间属性说明" class="headerlink" title="Tools命名空间属性说明"></a>Tools命名空间属性说明</h1><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/write/tool-attributes?hl=zh-cn">官方讲解</a></p>
+<h2 id="tools-node"><a href="#tools-node" class="headerlink" title="tools:node"></a>tools:node</h2><p>tools:node=”merge” 全部合并<br>tools:node=”merge-only-attributes” 仅合并属性，内部节点移除<br>tools:node=”remove” 移除该节点<br>tools:node=”removeAll” 移除同一个父节点下所有同类型节点<br>tools:node=”replace” 完全替换<br>tools:node=”strict” 不匹配，构建失败</p>
+<span id="more"></span>
+
+<h2 id="tools-remove"><a href="#tools-remove" class="headerlink" title="tools:remove"></a>tools:remove</h2><p>tools:remove=”attr1,attr2” 比如 tools:remove=”android:theme,android:windowSoftInputMode”</p>
+<h2 id="tools-strict"><a href="#tools-strict" class="headerlink" title="tools:strict"></a>tools:strict</h2><p>tools:strict=”attr1,attr2” 比如 tools:strict=”android:screenOrientation”</p>
+<h2 id="tools-selector"><a href="#tools-selector" class="headerlink" title="tools:selector"></a>tools:selector</h2><p>tools:selector=”packageName” 选择器，结合其他tools标记使用，比如</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">permission</span> <span class="attr">android:name</span>=<span class="string">&quot;com.example.MY_PERMISSION_0&quot;</span> </span></span><br><span class="line"><span class="tag">                      <span class="attr">tools:node</span>=<span class="string">&quot;remove&quot;</span> </span></span><br><span class="line"><span class="tag">                      <span class="attr">tools:selector</span>=<span class="string">&quot;com.example.submodule.p1&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-overrideLibrary"><a href="#tools-overrideLibrary" class="headerlink" title="tools:overrideLibrary"></a>tools:overrideLibrary</h2><p>tools:overrideLibrary 覆盖 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">uses-sdk</span> <span class="attr">tools:overrideLibrary</span>=<span class="string">&quot;com.example.lib1, com.example.lib2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="tools-ignore"><a href="#tools-ignore" class="headerlink" title="tools:ignore"></a>tools:ignore</h2><p>tools:ignore=”attr1,attr2” 忽略属性</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;show_all_apps&quot;</span> <span class="attr">tools:ignore</span>=<span class="string">&quot;MissingTranslation&quot;</span>&gt;</span>All<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ImageView</span> <span class="attr">tools:ignore</span>=<span class="string">&quot;contentDescription&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">FrameLayout</span> <span class="attr">tools:ignore</span>=<span class="string">&quot;all&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">FrameLayout</span> <span class="attr">tools:ignore</span>=<span class="string">&quot;UnusedResources,NewApi,StringFormatInvalid&quot;</span> /&gt;</span> 根节点添加，如果该xml资源未使用不提示</span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-targetApi"><a href="#tools-targetApi" class="headerlink" title="tools:targetApi"></a>tools:targetApi</h2><p>tools:targetApi=”14” tools:targetApi=”ice_cream_sandwich” 目标平台版本</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">GridLayout</span> <span class="attr">tools:targetApi</span>=<span class="string">&quot;ice_cream_sandwich&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-locale"><a href="#tools-locale" class="headerlink" title="tools:locale"></a>tools:locale</h2><p>tools:locale 指定时区，只能加给resources节点</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span> <span class="attr">tools:locale</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-shrinkMode"><a href="#tools-shrinkMode" class="headerlink" title="tools:shrinkMode"></a>tools:shrinkMode</h2><p>tools:shrinkMode 指定资源压缩模式，只能加给resources节点，需要build.gradle中android.buildTypes.release.shrinkResources = true<br>tools:shrinkMode=”safe”默认<br>tools:shrinkMode=”strict”<br><code>res/raw/keep.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span> <span class="attr">tools:shrinkMode</span>=<span class="string">&quot;strict&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-keep-amp-tools-discard"><a href="#tools-keep-amp-tools-discard" class="headerlink" title="tools:keep &amp; tools:discard"></a>tools:keep &amp; tools:discard</h2><p>以下两个结合tools:shrinkMode=”strict”使用<br>tools:keep=”references” 保留 tools:keep=”@layout/list_item_*,@menu/main_menus”<br>tools:discard=”references”  移除 tools:discard=”@layout/unused*”</p>
+<h2 id="tools-parentTag"><a href="#tools-parentTag" class="headerlink" title="tools:parentTag"></a>tools:parentTag</h2><p>tools:parentTag 父标签类型，结合merge使用</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">merge</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">tools:parentTag</span>=<span class="string">&quot;android.widget.LinearLayout&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tools-context"><a href="#tools-context" class="headerlink" title="tools:context"></a>tools:context</h2><p>tools:context=”com.example.XXXActivity” 指定当前关联上下文，只能在根节点添加</p>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>tools:itemCount=”20”<br>tools:listheader=”@layout/list_header_0” 指定表头，仅AdapterView有效<br>tools:listitem=”@layout/list_item_0”<br>tools:listfooter=”@layout/list_footer_0” 指定表尾，仅AdapterView有效</p>
+<h2 id="tools-layout"><a href="#tools-layout" class="headerlink" title="tools:layout"></a>tools:layout</h2><p>tools:layout=”@layout/some_layout”</p>
+<h2 id="tools-showIn"><a href="#tools-showIn" class="headerlink" title="tools:showIn"></a>tools:showIn</h2><p>tools:showIn=”@layout/some_parent_layout” 在哪个布局中展示，通过include引入的布局的根节点添加</p>
+<h2 id="tools-menu"><a href="#tools-menu" class="headerlink" title="tools:menu"></a>tools:menu</h2><p>tools:menu=”menu1,menu2” 指定工具栏菜单，根节点添加</p>
+<h2 id="tools-actionBarNavMode"><a href="#tools-actionBarNavMode" class="headerlink" title="tools:actionBarNavMode"></a>tools:actionBarNavMode</h2><p>ActionBar显示模式<br>tools:actionBarNavMode=”standard”<br>tools:actionBarNavMode=”tabs”<br>tools:actionBarNavMode=”list”</p>
+<h2 id="NumberPicker"><a href="#NumberPicker" class="headerlink" title="NumberPicker"></a>NumberPicker</h2><p>NumberPicker的最大最小值<br>tools:minValue<br>tools:maxValue</p>
+<h2 id="DrawerLayout"><a href="#DrawerLayout" class="headerlink" title="DrawerLayout"></a>DrawerLayout</h2><p>tools:openDrawer=”start”<br>tools:openDrawer=”end”<br>tools:openDrawer=”left”<br>tools:openDrawer=”right”<br>&lt;androidx.drawerlayout.DrawerLayout tools:openDrawer=”end”/&gt;</p>
+<h2 id="TextView"><a href="#TextView" class="headerlink" title="TextView"></a>TextView</h2><p>tools:text<br>@tools:sample/*<br><TextView tools:text="@tools:sample/lorem"/></p>
+<h2 id="tools-sample"><a href="#tools-sample" class="headerlink" title="@tools:sample"></a>@tools:sample</h2><p>@tools:sample/full_names<br>@tools:sample/first_names<br>@tools:sample/last_names<br>@tools:sample/cities<br>@tools:sample/us_zipcodes<br>@tools:sample/us_phones<br>@tools:sample/lorem/random<br>@tools:sample/date/day_of_week<br>@tools:sample/date/ddmmyy<br>@tools:sample/date/mmddyy<br>@tools:sample/date/hhmm<br>@tools:sample/date/hhmmss<br>@tools:sample/avatars – drawables<br>@tools:sample/backgrounds/scenic – backgrounds</p>
+<h2 id="sampledata"><a href="#sampledata" class="headerlink" title="sampledata"></a>sampledata</h2><p>app/sampledata/names<br><TextView tools:text="@sample/names"/></p>
+<h2 id="ImageView"><a href="#ImageView" class="headerlink" title="ImageView"></a>ImageView</h2><p>tools:src<br>app/sampledata/avatars<br>app/sampledata/avatars/avatar_1.xml<br>app/sampledata/avatars/avatar_2.xml<br>app/sampledata/avatars/avatar_3.xml<br>app/sampledata/avatars/avatar_4.xml<br><ImageView tools:src="@sample/avatars"/></p>
+<p><code>app/sampledata/users.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;city&quot;</span>: <span class="string">&quot;Hemel Hempstead, Hertfordshire, UK&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;@sample/avatars&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;city&quot;</span>: <span class="string">&quot;Brokenwind, Aberdeenshire, UK&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;@sample/avatars&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;city&quot;</span>: <span class="string">&quot;Málaga, España&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;@sample/avatars&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;city&quot;</span>: <span class="string">&quot;Batchelors Bump, Essex, UK&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;avatar&quot;</span>: <span class="string">&quot;@sample/avatars&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span> <span class="attr">tools:text</span>=<span class="string">&quot;@sample/users.json/data/city&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ImageView</span> <span class="attr">tools:text</span>=<span class="string">&quot;@sample/users.json/data/avatar&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2021/11/10/android-tools-namespace/">http://qomg.github.io/2021/11/10/android-tools-namespace/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/tools-ns/" class="tag">tools:ns</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/14/custom-plugin/" >Flutter Ume Custom Plugin<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/10/Android-Annotation/" >Android Annotation<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>

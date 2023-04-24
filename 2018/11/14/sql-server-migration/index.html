@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>SQL Server Migration | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">SQL Server Migration</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2018.11.14"><i class="far fa-calendar-alt"></i> 2018.11.14</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">206 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h2 id="Add-Linked-Server"><a href="#Add-Linked-Server" class="headerlink" title="Add Linked Server"></a>Add Linked Server</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql?view=sql-server-2017">sp-addlinkedserver</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql?view=sql-server-2017">sp-addlinkedsrvlogin</a></p>
+<span id="more"></span>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use YourNewDBName</span><br><span class="line">go</span><br><span class="line"><span class="keyword">exec</span> sp_addlinkedserver <span class="variable">@server</span> <span class="operator">=</span> N<span class="string">&#x27;YourLinkedServerName&#x27;</span>, <span class="variable">@srvproduct</span><span class="operator">=</span>N<span class="string">&#x27;&#x27;</span>, <span class="variable">@provider</span><span class="operator">=</span>N<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="variable">@datasrc</span><span class="operator">=</span>N<span class="string">&#x27;YourSqlServerIpAddress&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">exec</span> sp_addlinkedsrvlogin <span class="variable">@rmtsrvname</span><span class="operator">=</span>N<span class="string">&#x27;YourLinkedServerName&#x27;</span>,<span class="variable">@useself</span><span class="operator">=</span>N<span class="string">&#x27;False&#x27;</span>,<span class="variable">@locallogin</span><span class="operator">=</span><span class="keyword">NULL</span>,<span class="variable">@rmtuser</span><span class="operator">=</span>N<span class="string">&#x27;YourSAName&#x27;</span>,<span class="variable">@rmtpassword</span><span class="operator">=</span><span class="string">&#x27;YourPassword</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Import-Data-which-nonempty"><a href="#Import-Data-which-nonempty" class="headerlink" title="Import Data (which nonempty)"></a>Import Data (which nonempty)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span></span><br><span class="line"><span class="keyword">declare</span> <span class="variable">@tablename</span> <span class="type">varchar</span>(<span class="number">50</span>)</span><br><span class="line"><span class="keyword">declare</span> csr <span class="keyword">cursor</span></span><br><span class="line"><span class="keyword">for</span>(</span><br><span class="line"><span class="keyword">select</span> o.name</span><br><span class="line"><span class="keyword">from</span> [YourLinkedServerName].[YourOldDBName].sys.indexes <span class="keyword">as</span> i </span><br><span class="line"><span class="keyword">join</span> [YourLinkedServerName].[YourOldDBName].sys.objects <span class="keyword">as</span> o <span class="keyword">on</span> i.object_id <span class="operator">=</span> o.object_id</span><br><span class="line"><span class="keyword">join</span> [YourLinkedServerName].[YourOldDBName].sys.dm_db_partition_stats <span class="keyword">as</span> ddps <span class="keyword">on</span> i.object_id <span class="operator">=</span> ddps.object_id <span class="keyword">and</span> i.index_id <span class="operator">=</span> ddps.index_id </span><br><span class="line"><span class="keyword">where</span> i.index_id <span class="operator">&lt;</span> <span class="number">2</span> <span class="keyword">and</span> o.is_ms_shipped <span class="operator">=</span> <span class="number">0</span> <span class="keyword">and</span> ddps.row_count <span class="operator">&gt;</span> <span class="number">0</span></span><br><span class="line">)</span><br><span class="line"><span class="comment">--disable foreign key</span></span><br><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS<span class="operator">=</span><span class="number">0</span></span><br><span class="line"><span class="keyword">open</span> csr</span><br><span class="line"><span class="keyword">fetch</span> next <span class="keyword">from</span> csr <span class="keyword">into</span> <span class="variable">@tablename</span></span><br><span class="line">while @<span class="variable">@FETCH</span>_STATUS <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">	<span class="keyword">begin</span></span><br><span class="line">		<span class="keyword">declare</span> <span class="variable">@sqlstr</span> <span class="type">varchar</span>(<span class="number">200</span>)</span><br><span class="line">		<span class="keyword">set</span> <span class="variable">@sqlstr</span> <span class="operator">=</span> <span class="string">&#x27;insert into &#x27;</span> <span class="operator">+</span> <span class="variable">@tablename</span> <span class="operator">+</span> <span class="string">&#x27; select * from [YourLinkedServerName].[YourOldDBName].dbo.&#x27;</span> <span class="operator">+</span> <span class="variable">@tablename</span></span><br><span class="line">		<span class="keyword">begin</span> try</span><br><span class="line">			<span class="keyword">exec</span> (<span class="variable">@sqlstr</span>)</span><br><span class="line">		<span class="keyword">end</span> try</span><br><span class="line">		<span class="comment">-- WARNING catch without interrupt</span></span><br><span class="line">		<span class="keyword">begin</span> catch</span><br><span class="line">			<span class="comment">--composite primary key</span></span><br><span class="line">			print <span class="variable">@sqlstr</span></span><br><span class="line">		<span class="keyword">end</span> catch</span><br><span class="line">		<span class="keyword">fetch</span> next <span class="keyword">from</span> csr <span class="keyword">into</span> <span class="variable">@tablename</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">close</span> csr</span><br><span class="line"><span class="keyword">deallocate</span> csr</span><br><span class="line"><span class="comment">--enable foreign key</span></span><br><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS<span class="operator">=</span><span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Be-aware-of-Composite-Primary-Key"><a href="#Be-aware-of-Composite-Primary-Key" class="headerlink" title="Be aware of Composite Primary Key"></a>Be aware of Composite Primary Key</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> IDENTITY_INSERT dbo.CompositePrimaryKeyTable <span class="keyword">ON</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dbo.CompositePrimaryKeyTable(PrimaryKey1,PrimaryKey2,OtherField,...)</span><br><span class="line"><span class="keyword">select</span> PrimaryKey1,PrimaryKey2,OtherField,... <span class="keyword">from</span> [YourLinkedServerName].[YourOldDBName]. dbo.CompositePrimaryKeyTable</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> IDENTITY_INSERT dbo.CompositePrimaryKeyTable OFF</span><br></pre></td></tr></table></figure></div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2018/11/14/sql-server-migration/">http://qomg.github.io/2018/11/14/sql-server-migration/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/11/14/docker-run-mssql-server-linux/" >Docker Run MSSQL Server Linux<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/11/14/macosx-snippets/" >Macosx Snippets<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>
