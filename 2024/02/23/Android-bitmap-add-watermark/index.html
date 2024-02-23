@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Android bitmap add watermark | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Android bitmap add watermark</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2024.02.23"><i class="far fa-calendar-alt"></i> 2024.02.23</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2024.02.23"><i class="far fa-calendar-check"></i> 2024.02.23</span>
+      </div>
+     
+    
+      <div class="post-meta-item categories">
+        
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Android/">Android</a>
+        
+      </div>
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">281 words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 支持上下左右</span></span><br><span class="line">addWatermark(originalBitmap, <span class="string">&quot;@grivos&quot;</span>, WatermarkOptions(Corner.BOTTOM_RIGHT))</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现源码"><a href="#实现源码" class="headerlink" title="实现源码"></a>实现源码</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.graphics.*</span><br><span class="line"><span class="keyword">import</span> android.graphics.Paint.ANTI_ALIAS_FLAG</span><br><span class="line"><span class="keyword">import</span> android.graphics.Paint.DITHER_FLAG</span><br><span class="line"><span class="keyword">import</span> androidx.<span class="keyword">annotation</span>.ColorInt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">addWatermark</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    bitmap: <span class="type">Bitmap</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    watermarkText: <span class="type">String</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    options: <span class="type">WatermarkOptions</span> = WatermarkOptions()</span></span></span><br><span class="line">): Bitmap &#123;</span><br><span class="line">    <span class="keyword">val</span> result = bitmap.copy(bitmap.config, <span class="literal">true</span>)</span><br><span class="line">    <span class="keyword">val</span> canvas = Canvas(result)</span><br><span class="line">    <span class="keyword">val</span> paint = Paint(ANTI_ALIAS_FLAG or DITHER_FLAG)</span><br><span class="line">    paint.textAlign = <span class="keyword">when</span> (options.corner) &#123;</span><br><span class="line">        Corner.TOP_LEFT,</span><br><span class="line">        Corner.BOTTOM_LEFT -&gt; Paint.Align.LEFT</span><br><span class="line">        Corner.TOP_RIGHT,</span><br><span class="line">        Corner.BOTTOM_RIGHT -&gt; Paint.Align.RIGHT</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> textSize = result.width * options.textSizeToWidthRatio</span><br><span class="line">    paint.textSize = textSize</span><br><span class="line">    paint.color = options.textColor</span><br><span class="line">    <span class="keyword">if</span> (options.shadowColor != <span class="literal">null</span>) &#123;</span><br><span class="line">        paint.setShadowLayer(textSize / <span class="number">2</span>, <span class="number">0f</span>, <span class="number">0f</span>, options.shadowColor)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (options.typeface != <span class="literal">null</span>) &#123;</span><br><span class="line">        paint.typeface = options.typeface</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> padding = result.width * options.paddingToWidthRatio</span><br><span class="line">    <span class="keyword">val</span> coordinates =</span><br><span class="line">        calculateCoordinates(watermarkText, paint, options, canvas.width, canvas.height, padding)</span><br><span class="line">    canvas.drawText(watermarkText, coordinates.x, coordinates.y, paint)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">calculateCoordinates</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    watermarkText: <span class="type">String</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    paint: <span class="type">Paint</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    options: <span class="type">WatermarkOptions</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    width: <span class="type">Int</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    height: <span class="type">Int</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">    padding: <span class="type">Float</span></span></span></span><br><span class="line"><span class="params"><span class="function">)</span></span>: PointF &#123;</span><br><span class="line">    <span class="keyword">val</span> x = <span class="keyword">when</span> (options.corner) &#123;</span><br><span class="line">        Corner.TOP_LEFT,</span><br><span class="line">        Corner.BOTTOM_LEFT -&gt; &#123;</span><br><span class="line">            padding</span><br><span class="line">        &#125;</span><br><span class="line">        Corner.TOP_RIGHT,</span><br><span class="line">        Corner.BOTTOM_RIGHT -&gt; &#123;</span><br><span class="line">            width - padding</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">val</span> y = <span class="keyword">when</span> (options.corner) &#123;</span><br><span class="line">        Corner.BOTTOM_LEFT,</span><br><span class="line">        Corner.BOTTOM_RIGHT -&gt; &#123;</span><br><span class="line">            height - padding</span><br><span class="line">        &#125;</span><br><span class="line">        Corner.TOP_LEFT,</span><br><span class="line">        Corner.TOP_RIGHT -&gt; &#123;</span><br><span class="line">            <span class="keyword">val</span> bounds = Rect()</span><br><span class="line">            paint.getTextBounds(watermarkText, <span class="number">0</span>, watermarkText.length, bounds)</span><br><span class="line">            <span class="keyword">val</span> textHeight = bounds.height()</span><br><span class="line">            textHeight + padding</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> PointF(x, y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="keyword">class</span> <span class="title class_">Corner</span> &#123;</span><br><span class="line">    TOP_LEFT,</span><br><span class="line">    TOP_RIGHT,</span><br><span class="line">    BOTTOM_LEFT,</span><br><span class="line">    BOTTOM_RIGHT,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">WatermarkOptions</span>(</span><br><span class="line">    <span class="keyword">val</span> corner: Corner = Corner.BOTTOM_RIGHT,</span><br><span class="line">    <span class="keyword">val</span> textSizeToWidthRatio: <span class="built_in">Float</span> = <span class="number">0.04f</span>,</span><br><span class="line">    <span class="keyword">val</span> paddingToWidthRatio: <span class="built_in">Float</span> = <span class="number">0.03f</span>,</span><br><span class="line">    <span class="meta">@ColorInt</span> <span class="keyword">val</span> textColor: <span class="built_in">Int</span> = Color.WHITE,</span><br><span class="line">    <span class="meta">@ColorInt</span> <span class="keyword">val</span> shadowColor: <span class="built_in">Int</span>? = Color.BLACK,</span><br><span class="line">    <span class="keyword">val</span> typeface: Typeface? = <span class="literal">null</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2024/02/23/Android-bitmap-add-watermark/">http://qomg.github.io/2024/02/23/Android-bitmap-add-watermark/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/bitmap/" class="tag">bitmap</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/watermark/" class="tag">watermark</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2024/02/23/Android-bitmap-trim-white/" >Android bitmap trim white<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2023/04/16/gradle-resolution-rules/" >gradle resolution rules<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>

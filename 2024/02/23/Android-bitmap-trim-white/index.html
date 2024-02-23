@@ -28,7 +28,7 @@
 
   
 
-  <title>clean .git folder | mind pieces</title>
+  <title>Android bitmap trim white | mind pieces</title>
 
   
 
@@ -182,29 +182,29 @@
 
     
 <article id="post">
-  <div class="post-title">clean .git folder</div>
+  <div class="post-title">Android bitmap trim white</div>
   
 <div class="post-meta">
     
     
       <div class="post-meta-item date">
-        <span title="Created 2023.04.16"><i class="far fa-calendar-alt"></i> 2023.04.16</span>
+        <span title="Created 2024.02.23"><i class="far fa-calendar-alt"></i> 2024.02.23</span>
       </div>
       <div class="post-meta-item updated">
-        <span title="Updated 2023.04.16"><i class="far fa-calendar-check"></i> 2023.04.16</span>
+        <span title="Updated 2024.02.23"><i class="far fa-calendar-check"></i> 2024.02.23</span>
       </div>
      
     
       <div class="post-meta-item categories">
         
-          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Git/">Git</a>
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Android/">Android</a>
         
       </div>
      
     
      <div class="post-meta-item wordcount">
         
-          <i class="fas fa-pencil-alt"></i> <span class="post-count">25 words</span>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">265 words</span>
            
         
           <i class="far fa-clock"></i> <span class="post-count">1 min</span>
@@ -216,16 +216,14 @@
 
   
   <div class="content">
-        <div><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/5277467/how-can-i-clean-my-git-folder-cleaned-up-my-project-directory-but-git-is-sti">clean .git folder</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git reflog expire --expire=now --all</span><br><span class="line">git repack -ad  <span class="comment"># Remove dangling objects from packfiles</span></span><br><span class="line">git prune       <span class="comment"># Remove dangling loose objects</span></span><br><span class="line"></span><br><span class="line">git gc --aggressive --prune=now</span><br></pre></td></tr></table></figure>
-</div>
+        <div><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 去除多余白框</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">trimBitmap</span><span class="params">(bitmap: <span class="type">Bitmap</span>)</span></span>: Bitmap &#123;</span><br><span class="line">    <span class="keyword">var</span> top = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> bottom = bitmap.height - <span class="number">1</span></span><br><span class="line">    <span class="keyword">var</span> left = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> right = bitmap.width - <span class="number">1</span></span><br><span class="line">    <span class="comment">// 从顶部开始扫描，找到第一个非白色像素的行</span></span><br><span class="line">    <span class="keyword">while</span> (top &lt; bitmap.height &amp;&amp; isRowWhite(bitmap, top)) &#123;</span><br><span class="line">        top++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 从底部开始扫描，找到第一个非白色像素的行</span></span><br><span class="line">    <span class="keyword">while</span> (bottom &gt;= top &amp;&amp; isRowWhite(bitmap, bottom)) &#123;</span><br><span class="line">        bottom--</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 从左侧开始扫描，找到第一个非白色像素的列</span></span><br><span class="line">    <span class="keyword">while</span> (left &lt; bitmap.width &amp;&amp; isColumnWhite(bitmap, left, top, bottom)) &#123;</span><br><span class="line">        left++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 从右侧开始扫描，找到第一个非白色像素的列</span></span><br><span class="line">    <span class="keyword">while</span> (right &gt;= left &amp;&amp; isColumnWhite(bitmap, right, top, bottom)) &#123;</span><br><span class="line">        right--</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 裁剪图像</span></span><br><span class="line">    <span class="keyword">return</span> Bitmap.createBitmap(bitmap, left, top, right - left + <span class="number">1</span>, bottom - top + <span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">isRowWhite</span><span class="params">(bitmap: <span class="type">Bitmap</span>, row: <span class="type">Int</span>)</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (x <span class="keyword">in</span> <span class="number">0</span> until bitmap.width) &#123;</span><br><span class="line">        <span class="keyword">if</span> (bitmap.hasColor(x, row)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">isColumnWhite</span><span class="params">(bitmap: <span class="type">Bitmap</span>, column: <span class="type">Int</span>, top: <span class="type">Int</span>, bottom: <span class="type">Int</span>)</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (y <span class="keyword">in</span> top..bottom) &#123;</span><br><span class="line">        <span class="keyword">if</span> (bitmap.hasColor(column, y)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> Bitmap.<span class="title">hasColor</span><span class="params">(x: <span class="type">Int</span>, y: <span class="type">Int</span>)</span></span>: <span class="built_in">Boolean</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> p = getPixel(x, y)</span><br><span class="line">    <span class="keyword">return</span> p != Color.WHITE &amp;&amp; p != Color.TRANSPARENT</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
         
           <div class="post-copyright">
                   <div class="copyright-item">
                       <span> Author: qomg</span>
                   </div>
                   <div class="copyright-item">
-                      <span> Link: <a href="http://qomg.github.io/2023/04/16/clean-git-folder/">http://qomg.github.io/2023/04/16/clean-git-folder/</a></span>
+                      <span> Link: <a href="http://qomg.github.io/2024/02/23/Android-bitmap-trim-white/">http://qomg.github.io/2024/02/23/Android-bitmap-trim-white/</a></span>
                   </div>
                   <div class="copyright-item">
                       <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
@@ -250,20 +248,20 @@
     
     <div class="post_tags">
       
-        <i class="fas fa-tag"></i> <a href="/tags/clean/" class="tag">clean</a>
+        <i class="fas fa-tag"></i> <a href="/tags/bitmap/" class="tag">bitmap</a>
       
-        <i class="fas fa-tag"></i> <a href="/tags/gc/" class="tag">gc</a>
+        <i class="fas fa-tag"></i> <a href="/tags/clip/" class="tag">clip</a>
       
     </div>
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/2023/04/16/gradle-resolution-rules/" >gradle resolution rules<i class="fa fa-chevron-left"></i></a>
+            <a href="/2024/02/23/Git-commit-message/" >Git commit message<i class="fa fa-chevron-left"></i></a>
         </div>
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2023/04/16/android-fastlane/" >android fastlane<i class="fa fa-chevron-right"></i></a>
+            <a href="/2024/02/23/Android-bitmap-add-watermark/" >Android bitmap add watermark<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

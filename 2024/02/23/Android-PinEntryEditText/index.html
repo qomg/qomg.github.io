@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Android PinEntryEditText | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Android PinEntryEditText</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2024.02.23"><i class="far fa-calendar-alt"></i> 2024.02.23</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2024.02.23"><i class="far fa-calendar-check"></i> 2024.02.23</span>
+      </div>
+     
+    
+      <div class="post-meta-item categories">
+        
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Android/">Android</a>
+        
+      </div>
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">1k words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">6 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">com.yeahka.widget.safekeyboard.PinEntryEditText</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:inputType</span>=<span class="string">&quot;number&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:backgroundStyle</span>=<span class="string">&quot;outline&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:charSize</span>=<span class="string">&quot;40dp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">com.yeahka.widget.safekeyboard.PinEntryEditText</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:inputType</span>=<span class="string">&quot;numberPassword&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:backgroundStyle</span>=<span class="string">&quot;fill&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:charSpace</span>=<span class="string">&quot;15dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:charSize</span>=<span class="string">&quot;45dp&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">com.yeahka.widget.safekeyboard.PinEntryEditText</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:inputType</span>=<span class="string">&quot;number&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:backgroundStyle</span>=<span class="string">&quot;underline&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">app:charSize</span>=<span class="string">&quot;40dp&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> android.content.Context;</span><br><span class="line"><span class="keyword">import</span> android.content.res.TypedArray;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Canvas;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Color;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Paint;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Typeface;</span><br><span class="line"><span class="keyword">import</span> android.text.Editable;</span><br><span class="line"><span class="keyword">import</span> android.text.InputFilter;</span><br><span class="line"><span class="keyword">import</span> android.text.InputType;</span><br><span class="line"><span class="keyword">import</span> android.text.TextPaint;</span><br><span class="line"><span class="keyword">import</span> android.text.method.DigitsKeyListener;</span><br><span class="line"><span class="keyword">import</span> android.util.AttributeSet;</span><br><span class="line"><span class="keyword">import</span> android.view.ActionMode;</span><br><span class="line"><span class="keyword">import</span> android.view.Menu;</span><br><span class="line"><span class="keyword">import</span> android.view.MenuItem;</span><br><span class="line"><span class="keyword">import</span> android.view.accessibility.AccessibilityNodeInfo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> androidx.annotation.Nullable;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.widget.AppCompatEditText;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PinEntryEditText</span> <span class="keyword">extends</span> <span class="title class_">AppCompatEditText</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">mCharSize</span> <span class="operator">=</span> <span class="number">40</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">mSpace</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">mRadius</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">mNumChars</span> <span class="operator">=</span> <span class="number">6</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">mBackgroundStyle</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">mLineStroke</span> <span class="operator">=</span> <span class="number">0.5f</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">float</span> <span class="variable">mLineStrokeSelected</span> <span class="operator">=</span> <span class="number">0.5f</span>;</span><br><span class="line">    <span class="keyword">private</span> AccessibilityNodeInfo accessibilityNodeInfo;</span><br><span class="line">    <span class="keyword">private</span> OnClickListener mClickListener;</span><br><span class="line">    <span class="keyword">private</span> Paint mLinesPaint;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PinEntryEditText</span><span class="params">(Context context)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context);</span><br><span class="line">        init(context, <span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PinEntryEditText</span><span class="params">(Context context, AttributeSet attrs)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, attrs);</span><br><span class="line">        init(context, attrs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PinEntryEditText</span><span class="params">(Context context, AttributeSet attrs, <span class="type">int</span> defStyleAttr)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(context, attrs, defStyleAttr);</span><br><span class="line">        init(context, attrs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onAttachedToWindow</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onAttachedToWindow();</span><br><span class="line">        accessibilityNodeInfo = createAccessibilityNodeInfo();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onDetachedFromWindow</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onDetachedFromWindow();</span><br><span class="line">        accessibilityNodeInfo = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(Context context, <span class="meta">@Nullable</span> AttributeSet attrs)</span> &#123;</span><br><span class="line">        <span class="type">float</span> <span class="variable">multi</span> <span class="operator">=</span> context.getResources().getDisplayMetrics().density;</span><br><span class="line">        mCharSize = multi * mCharSize; <span class="comment">//convert to pixels for our density</span></span><br><span class="line">        mSpace = multi * mSpace; <span class="comment">//convert to pixels for our density</span></span><br><span class="line">        mRadius = multi * mRadius;</span><br><span class="line">        mLineStroke = multi * mLineStroke;</span><br><span class="line">        mLineStrokeSelected = multi * mLineStrokeSelected;</span><br><span class="line">        mLinesPaint = <span class="keyword">new</span> <span class="title class_">Paint</span>(getPaint());</span><br><span class="line">        mLinesPaint.setStrokeWidth(mLineStroke);</span><br><span class="line">        setBackgroundResource(<span class="number">0</span>);</span><br><span class="line">        setCursorVisible(<span class="literal">false</span>);</span><br><span class="line">        setTextIsSelectable(<span class="literal">false</span>);</span><br><span class="line">        setHint(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        setTypeface(Typeface.DEFAULT_BOLD);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (attrs == <span class="literal">null</span>) &#123;</span><br><span class="line">            setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);</span><br><span class="line">            setKeyListener(<span class="keyword">new</span> <span class="title class_">DigitsKeyListener</span>());</span><br><span class="line">            setFilters(<span class="keyword">new</span> <span class="title class_">InputFilter</span>[]&#123;<span class="keyword">new</span> <span class="title class_">InputFilter</span>.LengthFilter(mNumChars)&#125;);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mNumChars = attrs.getAttributeIntValue(android.R.attr.maxLength, mNumChars);</span><br><span class="line">            <span class="comment">//noinspection resource</span></span><br><span class="line">            <span class="type">TypedArray</span> <span class="variable">typedArray</span> <span class="operator">=</span> context.obtainStyledAttributes(attrs, R.styleable.PinEntryEditText);</span><br><span class="line">            mBackgroundStyle = typedArray.getInt(R.styleable.PinEntryEditText_backgroundStyle, mBackgroundStyle);</span><br><span class="line">            mCharSize = typedArray.getDimensionPixelSize(R.styleable.PinEntryEditText_charSize, (<span class="type">int</span>) mCharSize);</span><br><span class="line">            mSpace = typedArray.getDimensionPixelSize(R.styleable.PinEntryEditText_charSpace, (<span class="type">int</span>) mSpace);</span><br><span class="line">            typedArray.recycle();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (mBackgroundStyle == <span class="number">2</span>) &#123;</span><br><span class="line">            mLinesPaint.setStyle(Paint.Style.FILL);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mLinesPaint.setStyle(Paint.Style.STROKE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (isPassword()) &#123;</span><br><span class="line">            getPaint().setFakeBoldText(<span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//Disable copy paste</span></span><br><span class="line">        <span class="built_in">super</span>.setCustomSelectionActionModeCallback(<span class="keyword">new</span> <span class="title class_">ActionMode</span>.Callback() &#123;</span><br><span class="line">            <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onPrepareActionMode</span><span class="params">(ActionMode mode, Menu menu)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onDestroyActionMode</span><span class="params">(ActionMode mode)</span> &#123;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onCreateActionMode</span><span class="params">(ActionMode mode, Menu menu)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onActionItemClicked</span><span class="params">(ActionMode mode, MenuItem item)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// When tapped, move cursor to end of text.</span></span><br><span class="line">        <span class="built_in">super</span>.setOnClickListener(v -&gt; &#123;</span><br><span class="line">            <span class="type">Editable</span> <span class="variable">text</span> <span class="operator">=</span> getText();</span><br><span class="line">            <span class="keyword">if</span> (text != <span class="literal">null</span>) &#123;</span><br><span class="line">                setSelection(text.length());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (mClickListener != <span class="literal">null</span>) &#123;</span><br><span class="line">                mClickListener.onClick(v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> <span class="title function_">isPassword</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> accessibilityNodeInfo != <span class="literal">null</span> &amp;&amp; accessibilityNodeInfo.isPassword();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setOnClickListener</span><span class="params">(OnClickListener l)</span> &#123;</span><br><span class="line">        mClickListener = l;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setCustomSelectionActionModeCallback</span><span class="params">(ActionMode.Callback actionModeCallback)</span> &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;setCustomSelectionActionModeCallback() not supported.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onMeasure</span><span class="params">(<span class="type">int</span> widthMeasureSpec, <span class="type">int</span> heightMeasureSpec)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onMeasure(widthMeasureSpec, heightMeasureSpec);</span><br><span class="line">        <span class="type">int</span> <span class="variable">width</span> <span class="operator">=</span> getMeasuredWidth();</span><br><span class="line">        <span class="type">int</span> <span class="variable">height</span> <span class="operator">=</span> (<span class="type">int</span>) mCharSize + getPaddingTop() + getPaddingBottom();</span><br><span class="line">        System.out.println(<span class="string">&quot;onMeasure: &quot;</span> + width + <span class="string">&quot;,&quot;</span> + height);</span><br><span class="line">        setMeasuredDimension(width, height);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onDraw</span><span class="params">(Canvas canvas)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">availableWidth</span> <span class="operator">=</span> getWidth() - getPaddingRight() - getPaddingLeft();</span><br><span class="line">        <span class="type">float</span> <span class="variable">space</span> <span class="operator">=</span> mSpace * (mNumChars - <span class="number">1</span>);</span><br><span class="line">        <span class="type">float</span> <span class="variable">charWidth</span> <span class="operator">=</span> mCharSize * mNumChars;</span><br><span class="line">        <span class="keyword">if</span> (availableWidth &lt; charWidth) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (availableWidth - charWidth &lt; space) &#123;</span><br><span class="line">            space = availableWidth - charWidth;</span><br><span class="line">            mSpace = space / (mNumChars - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">float</span> <span class="variable">leftOffset</span> <span class="operator">=</span> (availableWidth - charWidth - space) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">startX</span> <span class="operator">=</span> (<span class="type">int</span>) (getPaddingLeft() + leftOffset);</span><br><span class="line">        <span class="type">int</span> <span class="variable">bottom</span> <span class="operator">=</span> getHeight() - getPaddingBottom();</span><br><span class="line">        <span class="type">int</span> <span class="variable">top</span> <span class="operator">=</span> getPaddingTop();</span><br><span class="line">        <span class="type">Editable</span> <span class="variable">text</span> <span class="operator">=</span> getText();</span><br><span class="line">        <span class="keyword">if</span> (text == <span class="literal">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">textLength</span> <span class="operator">=</span> text.length();</span><br><span class="line">        <span class="type">TextPaint</span> <span class="variable">textPaint</span> <span class="operator">=</span> getPaint();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; mNumChars; i++) &#123;</span><br><span class="line">            updateColorForLines(i == textLength);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (mBackgroundStyle == <span class="number">0</span>) &#123;</span><br><span class="line">                canvas.drawLine(startX, bottom, startX + mCharSize, bottom, mLinesPaint);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (mBackgroundStyle == <span class="number">1</span>) &#123;</span><br><span class="line">                canvas.drawRoundRect(startX, top, startX + mCharSize, bottom, mRadius, mRadius, mLinesPaint);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                canvas.drawRoundRect(startX, top, startX + mCharSize, bottom, mRadius, mRadius, mLinesPaint);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (textLength &gt; i) &#123;</span><br><span class="line">                <span class="type">float</span> textWidth;</span><br><span class="line">                <span class="type">boolean</span> <span class="variable">isPassword</span> <span class="operator">=</span> isPassword();</span><br><span class="line">                <span class="keyword">if</span> (isPassword) &#123;</span><br><span class="line">                    textWidth = textPaint.measureText(<span class="string">&quot;•&quot;</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    textWidth = textPaint.measureText(text.charAt(i) + <span class="string">&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Paint.<span class="type">FontMetrics</span> <span class="variable">metrics</span> <span class="operator">=</span> textPaint.getFontMetrics();</span><br><span class="line">                <span class="type">float</span> <span class="variable">textHeight</span> <span class="operator">=</span> metrics.bottom - metrics.top;</span><br><span class="line">                <span class="type">float</span> <span class="variable">middle</span> <span class="operator">=</span> startX + mCharSize / <span class="number">2</span>;</span><br><span class="line">                <span class="type">float</span> <span class="variable">x</span> <span class="operator">=</span> middle - textWidth / <span class="number">2</span>;</span><br><span class="line">                <span class="type">float</span> <span class="variable">y</span> <span class="operator">=</span> bottom - mCharSize / <span class="number">2</span> + textHeight / <span class="number">2</span> - metrics.descent;</span><br><span class="line">                <span class="type">String</span> <span class="variable">ch</span> <span class="operator">=</span> isPassword ? <span class="string">&quot;•&quot;</span> : Character.toString(text.charAt(i));</span><br><span class="line">                canvas.drawText(ch, x, y, textPaint);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (mSpace &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                startX += (<span class="type">int</span>) (mCharSize * <span class="number">2</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                startX += (<span class="type">int</span>) (mCharSize + mSpace);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> next Is the current char the next character to be input?</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">updateColorForLines</span><span class="params">(<span class="type">boolean</span> next)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isFocused()) &#123;</span><br><span class="line">            mLinesPaint.setStrokeWidth(mLineStrokeSelected);</span><br><span class="line">            <span class="keyword">if</span> (mBackgroundStyle == <span class="number">2</span>) &#123;</span><br><span class="line">                mLinesPaint.setColor(Color.parseColor(<span class="string">&quot;#ffF4F6F8&quot;</span>));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mLinesPaint.setColor(Color.parseColor(<span class="string">&quot;#666666&quot;</span>));</span><br><span class="line">                <span class="keyword">if</span> (next) &#123;</span><br><span class="line">                    mLinesPaint.setColor(Color.parseColor(<span class="string">&quot;#008CFF&quot;</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mLinesPaint.setStrokeWidth(mLineStroke);</span><br><span class="line">            <span class="keyword">if</span> (mBackgroundStyle == <span class="number">2</span>) &#123;</span><br><span class="line">                mLinesPaint.setColor(Color.parseColor(<span class="string">&quot;#ffF4F6F8&quot;</span>));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                mLinesPaint.setColor(Color.parseColor(<span class="string">&quot;#666666&quot;</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">&quot;PinEntryEditText&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;charSpace&quot;</span> <span class="attr">format</span>=<span class="string">&quot;dimension&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;charSize&quot;</span> <span class="attr">format</span>=<span class="string">&quot;dimension&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">&quot;backgroundStyle&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">&quot;underline&quot;</span> <span class="attr">value</span>=<span class="string">&quot;0&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">&quot;outline&quot;</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">&quot;fill&quot;</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">attr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="弹出系统键盘"><a href="#弹出系统键盘" class="headerlink" title="弹出系统键盘"></a>弹出系统键盘</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 部分Android 10 无效</span></span><br><span class="line">WindowInsetsControllerCompat(window, it).show(WindowInsetsCompat.Type.ime())</span><br></pre></td></tr></table></figure>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2024/02/23/Android-PinEntryEditText/">http://qomg.github.io/2024/02/23/Android-PinEntryEditText/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/Pin/" class="tag">Pin</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/EditText/" class="tag">EditText</a>
+      
+    </div>
+    <div class="post-nav">
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2024/02/23/Git-commit-message/" >Git commit message<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>
