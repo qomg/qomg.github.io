@@ -219,42 +219,65 @@
         <div><h1 id="Flutter进阶学习"><a href="#Flutter进阶学习" class="headerlink" title="Flutter进阶学习"></a>Flutter进阶学习</h1><h2 id="1、创建flutter组件使用示例项目"><a href="#1、创建flutter组件使用示例项目" class="headerlink" title="1、创建flutter组件使用示例项目"></a>1、创建flutter组件使用示例项目</h2><p>学习 <a target="_blank" rel="noopener" href="https://api.flutter.dev/">Flutter SDK</a></p>
 <span id="more"></span>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter create --list-samples=samples.json</span><br><span class="line">cat samples.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter create --list-samples=samples.json</span><br><span class="line"><span class="built_in">cat</span> samples.json</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">     <span class="attr">&quot;sourcePath&quot;</span>: <span class="string">&quot;lib/src/widgets/basic.dart&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;sourceLine&quot;</span>: <span class="number">1596</span>,</span><br><span class="line">     <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;material.FittedBox.1&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;channel&quot;</span>: <span class="string">&quot;stable&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;serial&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;package&quot;</span>: <span class="string">&quot;flutter&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;library&quot;</span>: <span class="string">&quot;material&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;element&quot;</span>: <span class="string">&quot;FittedBox&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;file&quot;</span>: <span class="string">&quot;material.FittedBox.1.dart&quot;</span>,</span><br><span class="line">     <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;In this example, the image is stretched to fill the entire [Container], which would\nnot happen normally without using FittedBox.&quot;</span></span><br><span class="line"> &#125;,</span><br><span class="line"> ...</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">     <span class="attr">&quot;sourcePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lib/src/widgets/basic.dart&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;sourceLine&quot;</span><span class="punctuation">:</span> <span class="number">1596</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;material.FittedBox.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;channel&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stable&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;serial&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;package&quot;</span><span class="punctuation">:</span> <span class="string">&quot;flutter&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;library&quot;</span><span class="punctuation">:</span> <span class="string">&quot;material&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;element&quot;</span><span class="punctuation">:</span> <span class="string">&quot;FittedBox&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;material.FittedBox.1.dart&quot;</span><span class="punctuation">,</span></span><br><span class="line">     <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;In this example, the image is stretched to fill the entire [Container], which would\nnot happen normally without using FittedBox.&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"> ...</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># samples.json 中 id</span></span><br><span class="line">flutter create -sample=material.FittedBox.1 sample_fittedbox</span><br><span class="line">code sample_fittedbox</span><br><span class="line">flutter pub get</span><br><span class="line">flutter run</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="2、app示例源码"><a href="#2、app示例源码" class="headerlink" title="2、app示例源码"></a>2、app示例源码</h2><p><a target="_blank" rel="noopener" href="https://flutter.github.io/samples/#">官方示例代码库</a></p>
 <h2 id="3、好用的工具包"><a href="#3、好用的工具包" class="headerlink" title="3、好用的工具包"></a>3、好用的工具包</h2><ul>
-<li>模块化开发 flutter_modular</li>
-<li>权限 permission_handler</li>
-<li>图库 image_picker</li>
-<li>相册 image_gallery_saver</li>
-<li>外链 url_launcher</li>
-<li>存储 path</li>
-<li>网络 dio</li>
-<li>日志 logger_flutter</li>
-<li>动画 lottie</li>
-<li>日历 table_calendar｜syncfusion_flutter_calendar</li>
-<li>唯一值 uuid</li>
-<li>二维码 qr_flutter</li>
-<li>本地化 easy_localization</li>
-<li>对话框 awesome_dialog</li>
-<li>列表头 flutter_sticky_header</li>
-<li>图片加载 image</li>
-<li>屏幕适配 flutter_screenutil</li>
-<li>应用信息 package_info_plus</li>
-<li>设备信息 device_info_plus</li>
-<li>组件绘制 after_layout</li>
-<li>日期选择 syncfusion_flutter_datepicker</li>
-<li>手写签名 signature</li>
-<li>多行文本 readmore</li>
-<li>日期格式化 date_format</li>
-</ul>
+<li><p>模块化开发 flutter_modular</p>
+</li>
+<li><p>权限 permission_handler</p>
+</li>
+<li><p>图库 image_picker</p>
+</li>
+<li><p>相册 image_gallery_saver</p>
+</li>
+<li><p>外链 url_launcher</p>
+</li>
+<li><p>存储 path</p>
+</li>
+<li><p>网络 dio</p>
+</li>
+<li><p>日志 logger_flutter</p>
+</li>
+<li><p>动画 lottie</p>
+</li>
+<li><p>日历 table_calendar｜syncfusion_flutter_calendar</p>
+</li>
+<li><p>唯一值 uuid</p>
+</li>
+<li><p>二维码 qr_flutter</p>
+</li>
+<li><p>本地化 easy_localization</p>
+</li>
+<li><p>对话框 awesome_dialog</p>
+</li>
+<li><p>列表头 flutter_sticky_header</p>
+</li>
+<li><p>图片加载 image</p>
+</li>
+<li><p>屏幕适配 flutter_screenutil</p>
+</li>
+<li><p>应用信息 package_info_plus</p>
+</li>
+<li><p>设备信息 device_info_plus</p>
+</li>
+<li><p>组件绘制 after_layout</p>
+</li>
+<li><p>日期选择 syncfusion_flutter_datepicker</p>
+</li>
+<li><p>手写签名 signature</p>
+</li>
+<li><p>多行文本 readmore</p>
+</li>
+<li><p>日期格式化 date_format</p>
+</li>
+<li><p>网络请求包</p>
 <ul>
-<li>网络请求包<ul>
 <li>rxdart</li>
 <li>dio</li>
 <li>retrofit</li>
@@ -312,7 +335,7 @@
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2021/11/14/Flutter-UME-tutorial/" >Flutter UME Tutorial<i class="fa fa-chevron-right"></i></a>
+            <a href="/2021/11/14/Flutter-UME-tutorial/" >Flutter UME tutorial<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

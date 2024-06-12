@@ -28,7 +28,7 @@
 
   
 
-  <title>Kotlin Functions | mind pieces</title>
+  <title>Kotlin functions | mind pieces</title>
 
   
 
@@ -182,7 +182,7 @@
 
     
 <article id="post">
-  <div class="post-title">Kotlin Functions</div>
+  <div class="post-title">Kotlin functions</div>
   
 <div class="post-meta">
     
@@ -245,7 +245,7 @@
 <ul>
 <li>7、class function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IntTransformer</span>: <span class="type"></span></span>(<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">operator</span> <span class="function"><span class="keyword">fun</span> <span class="title">invoke</span><span class="params">(x: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = TODO()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> intFunction: (<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> = IntTransformer()</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">IntTransformer</span>: <span class="type"></span>(<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">operator</span> <span class="function"><span class="keyword">fun</span> <span class="title">invoke</span><span class="params">(x: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = TODO()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> intFunction: (<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> = IntTransformer()</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>8、instance function</li>
@@ -255,12 +255,12 @@
 <ul>
 <li>9、builder function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HTML</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">body</span><span class="params">()</span></span> &#123; … &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">html</span><span class="params">(<span class="keyword">init</span>: <span class="type">HTML</span>.() -&gt; <span class="type">Unit</span>)</span></span>: HTML &#123;</span><br><span class="line">    <span class="keyword">val</span> html = HTML() <span class="comment">// create the receiver object</span></span><br><span class="line">    html.<span class="keyword">init</span>() <span class="comment">// pass the receiver object to the lambda</span></span><br><span class="line">    <span class="keyword">return</span> html</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> obj = html &#123; <span class="comment">// lambda with receiver begins here</span></span><br><span class="line">    body() <span class="comment">// calling a method on the receiver object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HTML</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">body</span><span class="params">()</span></span> &#123; … &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">html</span><span class="params">(<span class="keyword">init</span>: <span class="type">HTML</span>.() -&gt; <span class="type">Unit</span>)</span></span>: HTML &#123;</span><br><span class="line">    <span class="keyword">val</span> html = HTML() <span class="comment">// create the receiver object</span></span><br><span class="line">    html.<span class="keyword">init</span>() <span class="comment">// pass the receiver object to the lambda</span></span><br><span class="line">    <span class="keyword">return</span> html</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> obj = html &#123; <span class="comment">// lambda with receiver begins here</span></span><br><span class="line">    body() <span class="comment">// calling a method on the receiver object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>10、infix function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HTML</span> </span>&#123;</span><br><span class="line">    <span class="keyword">infix</span> <span class="function"><span class="keyword">fun</span> <span class="title">escape</span><span class="params">(escaper: (<span class="type">String</span>) -&gt; <span class="type">String</span>)</span></span>&#123;…&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> obj = HTML() escape &#123; s: String -&gt; “switch s case xxx”&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HTML</span> &#123;</span><br><span class="line">    <span class="keyword">infix</span> <span class="function"><span class="keyword">fun</span> <span class="title">escape</span><span class="params">(escaper: (<span class="type">String</span>) -&gt; <span class="type">String</span>)</span></span>&#123;…&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> obj = HTML() escape &#123; s: String -&gt; “switch s case xxx”&#125;</span><br></pre></td></tr></table></figure>
 
 
 </div>
@@ -299,7 +299,7 @@
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/2018/11/14/adb-snapshot/" >Adb Snapshot<i class="fa fa-chevron-left"></i></a>
+            <a href="/2018/11/14/adb-snapshot/" >adb snapshot<i class="fa fa-chevron-left"></i></a>
         </div>
       
       

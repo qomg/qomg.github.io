@@ -186,6 +186,44 @@
     
       <div class="recent-post-item">
           <div class="post-title ">
+            <a href="/2018/11/14/docker-run-mssql-server-linux/">Docker run MSSQL Server Linux</a>
+          </div>
+          <div class="post-meta">
+            
+            
+              <div class="post-meta-item date">
+                <span title="Created 2018.11.14"><i class="far fa-calendar-alt"></i> 2018.11.14</span>
+              </div>
+              <div class="post-meta-item updated">
+                <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+              </div>
+             
+             
+            
+             <div class="post-meta-item wordcount">
+                
+                  <i class="fas fa-pencil-alt"></i> <span class="post-count">123 words</span>
+                   
+                
+                  <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                                       
+              </div>
+             
+        </div>
+          <div class="content">
+            
+              <h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull microsoft/mssql-server-linux</span><br></pre></td></tr></table></figure>
+             
+          </div>
+        </div>
+      <div class="post-footer">
+        
+        <div class="readmore"><a href="/2018/11/14/docker-run-mssql-server-linux/">Read More »</a></div>   
+        
+    </div>
+    
+      <div class="recent-post-item">
+          <div class="post-title ">
             <a href="/2018/11/14/sql-server-migration/">SQL Server Migration</a>
           </div>
           <div class="post-meta">
@@ -224,7 +262,7 @@
     
       <div class="recent-post-item">
           <div class="post-title ">
-            <a href="/2018/11/14/macosx-snippets/">Macosx Snippets</a>
+            <a href="/2018/11/14/macosx-snippets/">macosx snippets</a>
           </div>
           <div class="post-meta">
             
@@ -240,7 +278,7 @@
             
              <div class="post-meta-item wordcount">
                 
-                  <i class="fas fa-pencil-alt"></i> <span class="post-count">141 words</span>
+                  <i class="fas fa-pencil-alt"></i> <span class="post-count">156 words</span>
                    
                 
                   <i class="far fa-clock"></i> <span class="post-count">1 min</span>
@@ -266,8 +304,8 @@
 <td>设置</td>
 </tr>
 <tr>
-<td>cmd + -/=</td>
-<td>缩小/放大</td>
+<td>cmd + -&#x2F;&#x3D;</td>
+<td>缩小&#x2F;放大</td>
 </tr>
 <tr>
 <td>ctrl + u</td>
@@ -278,24 +316,24 @@
 <td>删除到行尾</td>
 </tr>
 <tr>
-<td>ctrl + p/n</td>
-<td>上/下移动一行或者前/后一个命令</td>
+<td>ctrl + p&#x2F;n</td>
+<td>上&#x2F;下移动一行或者前&#x2F;后一个命令</td>
 </tr>
 <tr>
-<td>ctrl + b/f</td>
-<td>光标前/后移char</td>
+<td>ctrl + b&#x2F;f</td>
+<td>光标前&#x2F;后移char</td>
 </tr>
 <tr>
-<td>esc + b/f</td>
-<td>光标前/后移word</td>
+<td>esc + b&#x2F;f</td>
+<td>光标前&#x2F;后移word</td>
 </tr>
 <tr>
-<td>ctrl + a/e</td>
-<td>到行首/行尾</td>
+<td>ctrl + a&#x2F;e</td>
+<td>到行首&#x2F;行尾</td>
 </tr>
 <tr>
-<td>ctrl + h/d</td>
-<td>删前/后字符</td>
+<td>ctrl + h&#x2F;d</td>
+<td>删前&#x2F;后字符</td>
 </tr>
 <tr>
 <td>ctrl + y</td>
@@ -315,7 +353,7 @@
 </tr>
 <tr>
 <td>ctrl + r</td>
-<td>bck-i-search/reverse-i-search, 输入关键字搜索历史命令</td>
+<td>bck-i-search&#x2F;reverse-i-search, 输入关键字搜索历史命令</td>
 </tr>
 </tbody></table>
 
@@ -328,7 +366,7 @@
     
       <div class="recent-post-item">
           <div class="post-title ">
-            <a href="/2018/11/14/adb-snapshot/">Adb Snapshot</a>
+            <a href="/2018/11/14/adb-snapshot/">adb snapshot</a>
           </div>
           <div class="post-meta">
             
@@ -354,7 +392,7 @@
         </div>
           <div class="content">
             
-              <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(date +”%Y-%m-%d%H-%M-%S”).png”</span><br><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(date +”%Y-%m-%d%H-%M-%S”).png”</span><br></pre></td></tr></table></figure>
+              <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br></pre></td></tr></table></figure>
              
           </div>
         </div>
@@ -366,7 +404,7 @@
     
       <div class="recent-post-item">
           <div class="post-title ">
-            <a href="/2018/11/14/kotlin-functions/">Kotlin Functions</a>
+            <a href="/2018/11/14/kotlin-functions/">Kotlin functions</a>
           </div>
           <div class="post-meta">
             

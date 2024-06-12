@@ -28,7 +28,7 @@
 
   
 
-  <title>Flutter Ume Custom Plugin | mind pieces</title>
+  <title>flutter ume custom plugin | mind pieces</title>
 
   
 
@@ -182,7 +182,7 @@
 
     
 <article id="post">
-  <div class="post-title">Flutter Ume Custom Plugin</div>
+  <div class="post-title">flutter ume custom plugin</div>
   
 <div class="post-meta">
     
@@ -220,11 +220,13 @@
 
 <ol start="3">
 <li><p>创建插件配置，实现 <code>Pluggable</code> 虚类</p>
- <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_ume/flutter_ume.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Analysis</span> <span class="keyword">implements</span> <span class="title">Pluggable</span> </span>&#123;</span><br><span class="line">    Analysis(&#123;Key? key&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    Widget buildWidget(BuildContext? context) &#123;</span><br><span class="line">        <span class="keyword">return</span> Container(</span><br><span class="line">            color: Colors.white,</span><br><span class="line">            width: <span class="number">100</span>,</span><br><span class="line">            height: <span class="number">100</span>,</span><br><span class="line">            child: <span class="keyword">const</span> Center(child: Text(<span class="string">&#x27;TODO&#x27;</span>)),</span><br><span class="line">        );</span><br><span class="line">    &#125; <span class="comment">// 返回插件面板</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> name =&gt; <span class="string">&#x27;Analysis&#x27;</span>; <span class="comment">// 插件名称</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> displayName =&gt; <span class="string">&#x27;Analysis&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">void</span> onTrigger() &#123;&#125; <span class="comment">// 点击插件面板图标时调用</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    ImageProvider&lt;<span class="built_in">Object</span>&gt; <span class="keyword">get</span> iconImageProvider =&gt;</span><br><span class="line">        MemoryImage(base64Decode(iconData)); <span class="comment">// 插件图标</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_ume/flutter_ume.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Analysis</span> <span class="keyword">implements</span> <span class="title">Pluggable</span> </span>&#123;</span><br><span class="line">    Analysis(&#123;Key? key&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    Widget buildWidget(BuildContext? context) &#123;</span><br><span class="line">        <span class="keyword">return</span> Container(</span><br><span class="line">            color: Colors.white,</span><br><span class="line">            width: <span class="number">100</span>,</span><br><span class="line">            height: <span class="number">100</span>,</span><br><span class="line">            child: <span class="keyword">const</span> Center(child: Text(<span class="string">&#x27;TODO&#x27;</span>)),</span><br><span class="line">        );</span><br><span class="line">    &#125; <span class="comment">// 返回插件面板</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> name =&gt; <span class="string">&#x27;Analysis&#x27;</span>; <span class="comment">// 插件名称</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> displayName =&gt; <span class="string">&#x27;Analysis&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">void</span> onTrigger() &#123;&#125; <span class="comment">// 点击插件面板图标时调用</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    ImageProvider&lt;<span class="built_in">Object</span>&gt; <span class="keyword">get</span> iconImageProvider =&gt;</span><br><span class="line">        MemoryImage(base64Decode(iconData)); <span class="comment">// 插件图标</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>在工程中引入自定义插件</p>
 <ol>
 <li><p>修改 <code>pubspec.yaml</code>，添加依赖</p>
- <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dev_dependencies:</span></span><br><span class="line">  <span class="attr">flutter_ume_kit_analysis:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">path/to/flutter_ume_kit_analysis</span></span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dev_dependencies:</span></span><br><span class="line">  <span class="attr">flutter_ume_kit_analysis:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">path/to/flutter_ume_kit_analysis</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>执行 <code>flutter pub get</code></p>
 </li>
 <li><p>引入包</p>
@@ -232,7 +234,8 @@
 </ol>
 </li>
 <li><p>在工程中注册插件</p>
- <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (kDebugMode) &#123;</span><br><span class="line">  PluginManager.instance</span><br><span class="line">    ..register(Analysis());</span><br><span class="line">  runApp(injectUMEWidget(child: MyApp(), enable: <span class="keyword">true</span>));</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  runApp(MyApp());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (kDebugMode) &#123;</span><br><span class="line">  PluginManager.instance</span><br><span class="line">    ..register(Analysis());</span><br><span class="line">  runApp(injectUMEWidget(child: MyApp(), enable: <span class="keyword">true</span>));</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  runApp(MyApp());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>运行代码</p>
 </li>
 </ol>
@@ -272,12 +275,12 @@
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/2021/11/14/Flutter-UME-tutorial/" >Flutter UME Tutorial<i class="fa fa-chevron-left"></i></a>
+            <a href="/2021/11/14/Flutter-UME-tutorial/" >Flutter UME tutorial<i class="fa fa-chevron-left"></i></a>
         </div>
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2021/11/10/android-tools-namespace/" >Android Tools Namespace<i class="fa fa-chevron-right"></i></a>
+            <a href="/2021/11/10/android-tools-namespace/" >android tools namespace<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

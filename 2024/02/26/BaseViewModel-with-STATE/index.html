@@ -28,7 +28,7 @@
 
   
 
-  <title>gitlab - use emoji in commit message | mind pieces</title>
+  <title>BaseViewModel with STATE | mind pieces</title>
 
   
 
@@ -182,29 +182,29 @@
 
     
 <article id="post">
-  <div class="post-title">gitlab - use emoji in commit message</div>
+  <div class="post-title">BaseViewModel with STATE</div>
   
 <div class="post-meta">
     
     
       <div class="post-meta-item date">
-        <span title="Created 2021.11.10"><i class="far fa-calendar-alt"></i> 2021.11.10</span>
+        <span title="Created 2024.02.26"><i class="far fa-calendar-alt"></i> 2024.02.26</span>
       </div>
       <div class="post-meta-item updated">
-        <span title="Updated 2023.02.09"><i class="far fa-calendar-check"></i> 2023.02.09</span>
+        <span title="Updated 2024.02.26"><i class="far fa-calendar-check"></i> 2024.02.26</span>
       </div>
      
     
       <div class="post-meta-item categories">
         
-          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/gitlab/">gitlab</a>
+          <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/Android/">Android</a>
         
       </div>
      
     
      <div class="post-meta-item wordcount">
         
-          <i class="fas fa-pencil-alt"></i> <span class="post-count">337 words</span>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">169 words</span>
            
         
           <i class="far fa-clock"></i> <span class="post-count">1 min</span>
@@ -216,167 +216,7 @@
 
   
   <div class="content">
-        <div><h2 id="commit-message-格式如下"><a href="#commit-message-格式如下" class="headerlink" title="commit message 格式如下"></a>commit message 格式如下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:emoji: 主题</span><br><span class="line"></span><br><span class="line">提交信息主体</span><br><span class="line"></span><br><span class="line">Ref &lt;###&gt;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>初次提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;:tada: Initialize Repo&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="emoji说明"><a href="#emoji说明" class="headerlink" title="emoji说明"></a>emoji说明</h2><table>
-<thead>
-<tr>
-<th>emoji</th>
-<th>emoji 代码</th>
-<th>commit 说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:art: (调色板)</td>
-<td>:art:</td>
-<td>改进代码结构&#x2F;代码格式</td>
-</tr>
-<tr>
-<td>:fire: (火焰)</td>
-<td>:fire:</td>
-<td>移除代码或文件</td>
-</tr>
-<tr>
-<td>:bug: (bug)</td>
-<td>:bug:</td>
-<td>修复 bug</td>
-</tr>
-<tr>
-<td>:ambulance: (急救车)</td>
-<td>:ambulance:</td>
-<td>重要补丁</td>
-</tr>
-<tr>
-<td>:sparkles: (火花)</td>
-<td>:sparkles:</td>
-<td>引入新功能</td>
-</tr>
-<tr>
-<td>:memo: (备忘录)</td>
-<td>:memo:</td>
-<td>撰写文档</td>
-</tr>
-<tr>
-<td>:rocket: (火箭)</td>
-<td>:rocket:</td>
-<td>部署功能</td>
-</tr>
-<tr>
-<td>:lipstick: (口红)</td>
-<td>:lipstick:</td>
-<td>更新 UI 和样式文件</td>
-</tr>
-<tr>
-<td>:tada: (庆祝)</td>
-<td>:tada:</td>
-<td>初次提交</td>
-</tr>
-<tr>
-<td>:white_check_mark: (白色复选框)</td>
-<td>:white_check_mark:</td>
-<td>增加测试</td>
-</tr>
-<tr>
-<td>:lock: (锁)</td>
-<td>:lock:</td>
-<td>修复安全问题</td>
-</tr>
-<tr>
-<td>:apple: (苹果)</td>
-<td>:apple:</td>
-<td>修复 macOS 下的问题</td>
-</tr>
-<tr>
-<td>:penguin: (企鹅)</td>
-<td>:penguin:</td>
-<td>修复 Linux 下的问题</td>
-</tr>
-<tr>
-<td>:checkered_flag: (旗帜)</td>
-<td>:checked_flag:</td>
-<td>修复 Windows 下的问题</td>
-</tr>
-<tr>
-<td>:bookmark: (书签)</td>
-<td>:bookmark:</td>
-<td>发行&#x2F;版本标签</td>
-</tr>
-<tr>
-<td>:rotating_light: (警车灯)</td>
-<td>:rotating_light:</td>
-<td>移除 linter 警告</td>
-</tr>
-<tr>
-<td>:construction: (施工)</td>
-<td>:construction:</td>
-<td>工作进行中</td>
-</tr>
-<tr>
-<td>:green_heart: (绿心)</td>
-<td>:green_heart:</td>
-<td>修复 CI 构建问题</td>
-</tr>
-<tr>
-<td>:arrow_down: (下降箭头)</td>
-<td>:arrow_down:</td>
-<td>降级依赖</td>
-</tr>
-<tr>
-<td>:arrow_up: (上升箭头)</td>
-<td>:arrow_up:</td>
-<td>升级依赖</td>
-</tr>
-<tr>
-<td>:construction_worker: (工人)</td>
-<td>:construction_worker:</td>
-<td>添加 CI 构建系统</td>
-</tr>
-<tr>
-<td>:chart_with_upwards_trend: (上升趋势图)</td>
-<td>:chart_with_upwards_trend:</td>
-<td>添加分析或跟踪代码</td>
-</tr>
-<tr>
-<td>:hammer: (锤子)</td>
-<td>:hammer:</td>
-<td>重大重构</td>
-</tr>
-<tr>
-<td>:heavy_minus_sign: (减号)</td>
-<td>:heavy_minus_sign:</td>
-<td>减少一个依赖</td>
-</tr>
-<tr>
-<td>:whale: (鲸鱼)</td>
-<td>:whale:</td>
-<td>Docker 相关工作</td>
-</tr>
-<tr>
-<td>:heavy_plus_sign: (加号)</td>
-<td>:heavy_plug_sign:</td>
-<td>增加一个依赖</td>
-</tr>
-<tr>
-<td>:wrench: (扳手)</td>
-<td>:wrench:</td>
-<td>修改配置文件</td>
-</tr>
-<tr>
-<td>:globe_with_meridians: (地球)</td>
-<td>:globe_with_meridians:</td>
-<td>国际化与本地化</td>
-</tr>
-<tr>
-<td>:pencil2: (铅笔)</td>
-<td>:pencil2:</td>
-<td>修复 typo</td>
-</tr>
-</tbody></table>
+        <div><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">BaseViewModel</span>&lt;<span class="type">STATE: Parcelable</span>&gt;(</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> savedStateHandle: SavedStateHandle,</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> defaultState: STATE</span><br><span class="line">): ViewModel() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> KEY_STATE = <span class="string">&quot;state&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> state: StateFlow&lt;STATE&gt; = savedStateHandle.getStateFlow(KEY_STATE, defaultState)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">fun</span> <span class="title">updateState</span><span class="params">(newState: <span class="type">STATE</span>.() -&gt; <span class="type">STATE</span>)</span></span> &#123;</span><br><span class="line">        <span class="comment">// see DataStore updateData</span></span><br><span class="line">        <span class="comment">// get current state</span></span><br><span class="line">        savedStateHandle.<span class="keyword">get</span>&lt;STATE&gt;(KEY_STATE)?.let &#123; state -&gt;</span><br><span class="line">            <span class="comment">// simpan state baru ke savedStateHandle</span></span><br><span class="line">            savedStateHandle[KEY_STATE] = newState(state)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Parcelize</span></span><br><span class="line"><span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">MyState</span>(</span><br><span class="line">    <span class="keyword">val</span> text: String = <span class="string">&quot;&quot;</span></span><br><span class="line">): Parcelable</span><br><span class="line"></span><br><span class="line"><span class="meta">@HiltViewModel</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyViewModel</span> <span class="meta">@Inject</span> <span class="keyword">constructor</span>(</span><br><span class="line">    savedStateHandle: SavedStateHandle</span><br><span class="line">): BaseViewModel&lt;MyState&gt;(</span><br><span class="line">    savedStateHandle = savedStateHandle,</span><br><span class="line">    defaultState = MyState()</span><br><span class="line">) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">updateText</span><span class="params">(newText: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        updateState &#123;</span><br><span class="line">            copy(</span><br><span class="line">                text = newText</span><br><span class="line">            )</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Composable</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">MyScreen</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">    viewModel: <span class="type">MyViewModel</span> = hiltViewModel()</span></span></span><br><span class="line">) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Observe state</span></span><br><span class="line">    <span class="keyword">val</span> state <span class="keyword">by</span> viewModel.state.collectAsStateWithLifecycle()</span><br><span class="line"></span><br><span class="line">    Box(</span><br><span class="line">        contentAlignment = Alignment.Center,</span><br><span class="line">        modifier = Modifier</span><br><span class="line">            .fillMaxSize()</span><br><span class="line">    ) &#123;</span><br><span class="line">        OutlinedTextField(</span><br><span class="line">            value = state.text,</span><br><span class="line">            onValueChange = viewModel::updateText</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@AndroidEntryPoint</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MainActivity</span> : <span class="type">ComponentActivity</span>() &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        setContent &#123;</span><br><span class="line">            ComposeResearchTheme &#123;</span><br><span class="line">                Surface(</span><br><span class="line">                    modifier = Modifier.fillMaxSize(),</span><br><span class="line">                    color = MaterialTheme.colorScheme.background</span><br><span class="line">                ) &#123;</span><br><span class="line">                    MyScreen()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </div>
         
           <div class="post-copyright">
@@ -384,7 +224,7 @@
                       <span> Author: qomg</span>
                   </div>
                   <div class="copyright-item">
-                      <span> Link: <a href="http://qomg.github.io/2021/11/10/gitlab-emoji/">http://qomg.github.io/2021/11/10/gitlab-emoji/</a></span>
+                      <span> Link: <a href="http://qomg.github.io/2024/02/26/BaseViewModel-with-STATE/">http://qomg.github.io/2024/02/26/BaseViewModel-with-STATE/</a></span>
                   </div>
                   <div class="copyright-item">
                       <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
@@ -409,18 +249,16 @@
     
     <div class="post_tags">
       
-        <i class="fas fa-tag"></i> <a href="/tags/emoji/" class="tag">emoji</a>
+        <i class="fas fa-tag"></i> <a href="/tags/ViewModel/" class="tag">ViewModel</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/ViewState/" class="tag">ViewState</a>
       
     </div>
     <div class="post-nav">
       
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2021/11/10/ml-kit/" >ml-kit<i class="fa fa-chevron-left"></i></a>
-        </div>
-      
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2020/12/30/SQLServerUUID/" >SQL Server UUID<i class="fa fa-chevron-right"></i></a>
+            <a href="/2024/02/23/Android-PinEntryEditText/" >Android PinEntryEditText<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

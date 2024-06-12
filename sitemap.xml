@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qomg.github.io/2024/02/26/BaseViewModel-with-STATE/</loc>
+    
+    <lastmod>2024-02-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://qomg.github.io/2024/02/23/Android-PinEntryEditText/</loc>
     
     <lastmod>2024-02-23</lastmod>
@@ -207,7 +214,7 @@
 
   <url>
     <loc>http://qomg.github.io/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -215,126 +222,140 @@
   
   <url>
     <loc>http://qomg.github.io/tags/Annotation/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/ume/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/UUID/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/tools-ns/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/emoji/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/mlkit/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/fastlane/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/clean/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/gc/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/gradle/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/dependency/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/resolutionStrategy/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/bitmap/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/watermark/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/clip/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/tags/commit-message/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/Pin/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/EditText/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/bitmap/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/clip/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/watermark/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/ViewModel/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/ViewState/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/ume/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/commit-message/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/UUID/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/fastlane/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/tools-ns/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/clean/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/gc/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/emoji/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/gradle/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/dependency/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/resolutionStrategy/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/mlkit/</loc>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -343,42 +364,42 @@
   
   <url>
     <loc>http://qomg.github.io/categories/Android/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/flutter/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/categories/gitlab/</loc>
-    <lastmod>2024-02-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://qomg.github.io/categories/SQL-Server/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/Git/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/categories/SQL-Server/</loc>
+    <lastmod>2024-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/categories/gitlab/</loc>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/Gradle/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
