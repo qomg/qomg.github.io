@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -216,7 +213,7 @@
 
   
   <div class="content">
-        <div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">function</span> [dbo].uuid(<span class="variable">@id</span> <span class="type">varchar</span>(<span class="number">36</span>))</span><br><span class="line"><span class="keyword">returns</span> <span class="type">varchar</span>(<span class="number">48</span>)</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"> <span class="keyword">declare</span> <span class="variable">@ret</span> <span class="type">varchar</span>(<span class="number">48</span>)</span><br><span class="line"> <span class="keyword">select</span> <span class="variable">@ret</span><span class="operator">=</span>format(getdate(),<span class="string">&#x27;yyyyMMddHHmmss&#x27;</span>)<span class="operator">+</span><span class="built_in">lower</span>(replace(<span class="variable">@id</span>,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"> <span class="keyword">return</span> <span class="variable">@ret</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> dbo.uuid(NEWID())</span><br></pre></td></tr></table></figure>
+        <div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">function</span> [dbo].uuid(<span class="hljs-variable">@id</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">36</span>))<br><span class="hljs-keyword">returns</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">48</span>)<br><span class="hljs-keyword">as</span><br><span class="hljs-keyword">begin</span><br> <span class="hljs-keyword">declare</span> <span class="hljs-variable">@ret</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">48</span>)<br> <span class="hljs-keyword">select</span> <span class="hljs-variable">@ret</span><span class="hljs-operator">=</span>format(getdate(),<span class="hljs-string">&#x27;yyyyMMddHHmmss&#x27;</span>)<span class="hljs-operator">+</span><span class="hljs-built_in">lower</span>(replace(<span class="hljs-variable">@id</span>,<span class="hljs-string">&#x27;-&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>))<br> <span class="hljs-keyword">return</span> <span class="hljs-variable">@ret</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">select</span> dbo.uuid(NEWID())<br></code></pre></td></tr></table></figure>
 </div>
         
           <div class="post-copyright">
@@ -310,7 +307,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

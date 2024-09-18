@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -210,18 +207,18 @@
 
   
   <div class="content">
-        <div><h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br></pre></td></tr></table></figure>
+        <div><h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(<span class="hljs-built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”<br><span class="hljs-built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(<span class="hljs-built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”<br></code></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
-<h2 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a>截屏</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb exec-out screencap -p &gt; screen.png</span><br></pre></td></tr></table></figure>
+<h2 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a>截屏</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb exec-out screencap -p &gt; screen.png<br></code></pre></td></tr></table></figure>
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb shell screencap -p /sdcard/screencap.png</span><br><span class="line">adb pull /sdcard/screencap.png</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb shell screencap -p /sdcard/screencap.png<br>adb pull /sdcard/screencap.png<br></code></pre></td></tr></table></figure>
 
-<h2 id="录屏"><a href="#录屏" class="headerlink" title="录屏"></a>录屏</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell screenrecord /sdcard/screen.mp4</span><br><span class="line"><span class="comment"># ^C 停止</span></span><br><span class="line">adb pull /sdcard/screen.mp4</span><br></pre></td></tr></table></figure>
+<h2 id="录屏"><a href="#录屏" class="headerlink" title="录屏"></a>录屏</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb shell screenrecord /sdcard/screen.mp4<br><span class="hljs-comment"># ^C 停止</span><br>adb pull /sdcard/screen.mp4<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell screenrecord –bit-rate 12000000 /sdcard/screen.mp4</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb shell screenrecord –bit-rate 12000000 /sdcard/screen.mp4<br></code></pre></td></tr></table></figure>
 
 </div>
         
@@ -314,7 +311,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

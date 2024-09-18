@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -217,9 +214,9 @@
   
   <div class="content">
         <div><p><a target="_blank" rel="noopener" href="https://docs.gradle.org/current/userguide/resolution_rules.html">Customizing resolution of a dependency directly</a></p>
-<h2 id="use-variant-define-attributes"><a href="#use-variant-define-attributes" class="headerlink" title="use variant define attributes"></a>use variant define attributes</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">configurations.all &#123;</span><br><span class="line">    resolutionStrategy.dependencySubstitution &#123;</span><br><span class="line">        substitute(variant(module(<span class="string">&quot;com.google.guava:guava:28.2-jre&quot;</span>)) &#123;</span><br><span class="line">            attributes &#123;</span><br><span class="line">                attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category.REGULAR_PLATFORM))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).using(module(<span class="string">&quot;com.google.guava:guava:28.2-jre&quot;</span>))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="use-variant-define-attributes"><a href="#use-variant-define-attributes" class="headerlink" title="use variant define attributes"></a>use variant define attributes</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs groovy">configurations.all &#123;<br>    resolutionStrategy.dependencySubstitution &#123;<br>        substitute(variant(module(<span class="hljs-string">&quot;com.google.guava:guava:28.2-jre&quot;</span>)) &#123;<br>            attributes &#123;<br>                attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category.REGULAR_PLATFORM))<br>            &#125;<br>        &#125;).using(module(<span class="hljs-string">&quot;com.google.guava:guava:28.2-jre&quot;</span>))<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="specify-capabilities"><a href="#specify-capabilities" class="headerlink" title="specify capabilities"></a>specify capabilities</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">configurations.testCompileClasspath &#123;</span><br><span class="line">    resolutionStrategy.dependencySubstitution &#123;</span><br><span class="line">        substitute(module(<span class="string">&quot;com.acme:lib:1.0&quot;</span>)).using(variant(module(<span class="string">&quot;com.acme:lib:1.0&quot;</span>)) &#123;</span><br><span class="line">            capabilities &#123;</span><br><span class="line">                requireCapability(<span class="string">&quot;com.acme:lib-test-fixtures&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="specify-capabilities"><a href="#specify-capabilities" class="headerlink" title="specify capabilities"></a>specify capabilities</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs groovy">configurations.testCompileClasspath &#123;<br>    resolutionStrategy.dependencySubstitution &#123;<br>        substitute(module(<span class="hljs-string">&quot;com.acme:lib:1.0&quot;</span>)).using(variant(module(<span class="hljs-string">&quot;com.acme:lib:1.0&quot;</span>)) &#123;<br>            capabilities &#123;<br>                requireCapability(<span class="hljs-string">&quot;com.acme:lib-test-fixtures&quot;</span>)<br>            &#125;<br>        &#125;)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 </div>
         
           <div class="post-copyright">
@@ -317,7 +314,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

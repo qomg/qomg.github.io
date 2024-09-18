@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -213,54 +210,54 @@
         <div><ul>
 <li>1、function member</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> onClick: () -&gt; <span class="built_in">Unit</span> = …</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> onClick: () -&gt; <span class="hljs-built_in">Unit</span> = …<br></code></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
 <ul>
 <li>2、nullable function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> intFunc: ((<span class="built_in">Int</span>, <span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span>)? = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> intFunc: ((<span class="hljs-built_in">Int</span>, <span class="hljs-built_in">Int</span>) -&gt; <span class="hljs-built_in">Int</span>)? = <span class="hljs-literal">null</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>3、function type</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typealias</span> ClickHandler = (Button, ClickEvent) -&gt; <span class="built_in">Unit</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">typealias</span> ClickHandler = (Button, ClickEvent) -&gt; <span class="hljs-built_in">Unit</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>4、anonymous function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun</span><span class="params">(s: <span class="type">String</span>)</span></span>: <span class="built_in">Int</span> &#123; <span class="keyword">return</span> s.toIntOrNull() ?: <span class="number">0</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">(s: <span class="hljs-type">String</span>)</span></span>: <span class="hljs-built_in">Int</span> &#123; <span class="hljs-keyword">return</span> s.toIntOrNull() ?: <span class="hljs-number">0</span> &#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>5、lamda expression</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> reminderFunc = &#123; index: <span class="built_in">Int</span> -&gt; index % <span class="number">2</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> reminderFunc = &#123; index: <span class="hljs-built_in">Int</span> -&gt; index % <span class="hljs-number">2</span> &#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>6、callable reference</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">member function ::toString, String::toInt</span><br><span class="line">member property List::size</span><br><span class="line"><span class="keyword">constructor</span> ::someConstructorFuncName</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">member function ::toString, String::toInt<br>member property List::size<br><span class="hljs-keyword">constructor</span> ::someConstructorFuncName<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>7、class function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">IntTransformer</span>: <span class="type"></span>(<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">operator</span> <span class="function"><span class="keyword">fun</span> <span class="title">invoke</span><span class="params">(x: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = TODO()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> intFunction: (<span class="built_in">Int</span>) -&gt; <span class="built_in">Int</span> = IntTransformer()</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">IntTransformer</span>: <span class="hljs-type"></span>(<span class="hljs-built_in">Int</span>) -&gt; <span class="hljs-built_in">Int</span> &#123;<br>    <span class="hljs-keyword">override</span> <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">(x: <span class="hljs-type">Int</span>)</span></span>: <span class="hljs-built_in">Int</span> = TODO()<br>&#125;<br><span class="hljs-keyword">val</span> intFunction: (<span class="hljs-built_in">Int</span>) -&gt; <span class="hljs-built_in">Int</span> = IntTransformer()<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>8、instance function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> repeatFun: String.(<span class="built_in">Int</span>) -&gt; String = &#123; times -&gt;</span><br><span class="line">    <span class="keyword">this</span>.repeat(times)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> twoParameters: (String, <span class="built_in">Int</span>) -&gt; String = repeatFun</span><br><span class="line"><span class="keyword">val</span> s1 = repeatFun(“str”, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">val</span> s2 = “str”.repeatFun(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> repeatFun: String.(<span class="hljs-built_in">Int</span>) -&gt; String = &#123; times -&gt;<br>    <span class="hljs-keyword">this</span>.repeat(times)<br>&#125;<br><span class="hljs-keyword">val</span> twoParameters: (String, <span class="hljs-built_in">Int</span>) -&gt; String = repeatFun<br><span class="hljs-keyword">val</span> s1 = repeatFun(“str”, <span class="hljs-number">2</span>)<br><span class="hljs-keyword">val</span> s2 = “str”.repeatFun(<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>9、builder function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HTML</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">body</span><span class="params">()</span></span> &#123; … &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">html</span><span class="params">(<span class="keyword">init</span>: <span class="type">HTML</span>.() -&gt; <span class="type">Unit</span>)</span></span>: HTML &#123;</span><br><span class="line">    <span class="keyword">val</span> html = HTML() <span class="comment">// create the receiver object</span></span><br><span class="line">    html.<span class="keyword">init</span>() <span class="comment">// pass the receiver object to the lambda</span></span><br><span class="line">    <span class="keyword">return</span> html</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> obj = html &#123; <span class="comment">// lambda with receiver begins here</span></span><br><span class="line">    body() <span class="comment">// calling a method on the receiver object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HTML</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">body</span><span class="hljs-params">()</span></span> &#123; … &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">html</span><span class="hljs-params">(<span class="hljs-keyword">init</span>: <span class="hljs-type">HTML</span>.() -&gt; <span class="hljs-type">Unit</span>)</span></span>: HTML &#123;<br>    <span class="hljs-keyword">val</span> html = HTML() <span class="hljs-comment">// create the receiver object</span><br>    html.<span class="hljs-keyword">init</span>() <span class="hljs-comment">// pass the receiver object to the lambda</span><br>    <span class="hljs-keyword">return</span> html<br>&#125;<br><br><span class="hljs-keyword">val</span> obj = html &#123; <span class="hljs-comment">// lambda with receiver begins here</span><br>    body() <span class="hljs-comment">// calling a method on the receiver object</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>10、infix function</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HTML</span> &#123;</span><br><span class="line">    <span class="keyword">infix</span> <span class="function"><span class="keyword">fun</span> <span class="title">escape</span><span class="params">(escaper: (<span class="type">String</span>) -&gt; <span class="type">String</span>)</span></span>&#123;…&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">val</span> obj = HTML() escape &#123; s: String -&gt; “switch s case xxx”&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HTML</span> &#123;<br>    <span class="hljs-keyword">infix</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">escape</span><span class="hljs-params">(escaper: (<span class="hljs-type">String</span>) -&gt; <span class="hljs-type">String</span>)</span></span>&#123;…&#125;<br>&#125;<br><span class="hljs-keyword">val</span> obj = HTML() escape &#123; s: String -&gt; “switch s case xxx”&#125;<br></code></pre></td></tr></table></figure>
 
 
 </div>
@@ -354,7 +351,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

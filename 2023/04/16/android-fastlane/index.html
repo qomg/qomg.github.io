@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -219,9 +216,9 @@
         <div><p><a target="_blank" rel="noopener" href="https://docs.fastlane.tools/actions/gradle/">fastlane gradle</a></p>
 <p><a target="_blank" rel="noopener" href="https://docs.fastlane.tools/actions/build_android_app/">build android app</a></p>
 <p>fastlane action gradle</p>
-<h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">gradle(</span><br><span class="line">  <span class="symbol">task:</span> <span class="string">&quot;packTstAndProRelease&quot;</span>,</span><br><span class="line">  <span class="comment">#tasks: [&quot;clean&quot;, &quot;assemble&quot;]</span></span><br><span class="line">  <span class="symbol">flavor:</span> <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="symbol">build_type:</span> <span class="string">&quot;Release&quot;</span>,</span><br><span class="line">  <span class="symbol">print_command:</span> <span class="literal">false</span>,</span><br><span class="line">  <span class="symbol">print_command_output:</span> <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">#flags: &quot;--exitcode --xml file.xml&quot;</span></span><br><span class="line">  <span class="comment"># 配置属性</span></span><br><span class="line">  <span class="symbol">properties:</span> &#123;</span><br><span class="line">    <span class="comment"># 强制修改版本号 </span></span><br><span class="line">    <span class="string">&quot;android.injected.version.code&quot;</span> =&gt; <span class="number">100</span>,</span><br><span class="line">    <span class="string">&quot;android.injected.version.name&quot;</span> =&gt; <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="comment"># 打包签名</span></span><br><span class="line">    <span class="string">&quot;android.injected.signing.store.file&quot;</span> =&gt; <span class="string">&quot;keystore.jks&quot;</span>,</span><br><span class="line">    <span class="string">&quot;android.injected.signing.store.password&quot;</span> =&gt; <span class="string">&quot;store_password&quot;</span>,</span><br><span class="line">    <span class="string">&quot;android.injected.signing.key.alias&quot;</span> =&gt; <span class="string">&quot;key_alias&quot;</span>,</span><br><span class="line">    <span class="string">&quot;android.injected.signing.key.password&quot;</span> =&gt; <span class="string">&quot;key_password&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs ruby">gradle(<br>  <span class="hljs-symbol">task:</span> <span class="hljs-string">&quot;packTstAndProRelease&quot;</span>,<br>  <span class="hljs-comment">#tasks: [&quot;clean&quot;, &quot;assemble&quot;]</span><br>  <span class="hljs-symbol">flavor:</span> <span class="hljs-string">&quot;&quot;</span>,<br>  <span class="hljs-symbol">build_type:</span> <span class="hljs-string">&quot;Release&quot;</span>,<br>  <span class="hljs-symbol">print_command:</span> <span class="hljs-literal">false</span>,<br>  <span class="hljs-symbol">print_command_output:</span> <span class="hljs-literal">false</span>,<br>  <span class="hljs-comment">#flags: &quot;--exitcode --xml file.xml&quot;</span><br>  <span class="hljs-comment"># 配置属性</span><br>  <span class="hljs-symbol">properties:</span> &#123;<br>    <span class="hljs-comment"># 强制修改版本号 </span><br>    <span class="hljs-string">&quot;android.injected.version.code&quot;</span> =&gt; <span class="hljs-number">100</span>,<br>    <span class="hljs-string">&quot;android.injected.version.name&quot;</span> =&gt; <span class="hljs-string">&quot;1.0.0&quot;</span>,<br>    <span class="hljs-comment"># 打包签名</span><br>    <span class="hljs-string">&quot;android.injected.signing.store.file&quot;</span> =&gt; <span class="hljs-string">&quot;keystore.jks&quot;</span>,<br>    <span class="hljs-string">&quot;android.injected.signing.store.password&quot;</span> =&gt; <span class="hljs-string">&quot;store_password&quot;</span>,<br>    <span class="hljs-string">&quot;android.injected.signing.key.alias&quot;</span> =&gt; <span class="hljs-string">&quot;key_alias&quot;</span>,<br>    <span class="hljs-string">&quot;android.injected.signing.key.password&quot;</span> =&gt; <span class="hljs-string">&quot;key_password&quot;</span>,<br>  &#125;<br>)<br></code></pre></td></tr></table></figure>
 
-<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gradle(</span><br><span class="line">  <span class="symbol">task:</span> <span class="string">&quot;clean&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ruby">gradle(<br>  <span class="hljs-symbol">task:</span> <span class="hljs-string">&quot;clean&quot;</span><br>)<br></code></pre></td></tr></table></figure>
 </div>
         
           <div class="post-copyright">
@@ -315,7 +312,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

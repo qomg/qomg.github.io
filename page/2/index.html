@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -183,6 +180,44 @@
     
 
   <div id="recent-posts">
+    
+      <div class="recent-post-item">
+          <div class="post-title ">
+            <a href="/2023/04/15/chinese-copywriting-tutorial/">chinese copywriting tutorial</a>
+          </div>
+          <div class="post-meta">
+            
+            
+              <div class="post-meta-item date">
+                <span title="Created 2023.04.15"><i class="far fa-calendar-alt"></i> 2023.04.15</span>
+              </div>
+              <div class="post-meta-item updated">
+                <span title="Updated 2023.04.15"><i class="far fa-calendar-check"></i> 2023.04.15</span>
+              </div>
+             
+             
+            
+             <div class="post-meta-item wordcount">
+                
+                  <i class="fas fa-pencil-alt"></i> <span class="post-count">1.8k words</span>
+                   
+                
+                  <i class="far fa-clock"></i> <span class="post-count">6 min</span>
+                                       
+              </div>
+             
+        </div>
+          <div class="content">
+            
+                  
+             
+          </div>
+        </div>
+      <div class="post-footer">
+        
+        <div class="readmore"><a href="/2023/04/15/chinese-copywriting-tutorial/">Read More »</a></div>   
+        
+    </div>
     
       <div class="recent-post-item">
           <div class="post-title ">
@@ -380,7 +415,7 @@
 <li><p><code>flutter create -t package flutter_ume_kit_analysis</code> 创建一个插件包</p>
 </li>
 <li><p>修改插件包的 <code>pubspec.yaml</code>，添加依赖</p>
- <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dependencies:</span></span><br><span class="line">  <span class="attr">flutter_ume:</span> <span class="string">&#x27;&gt;=0.2.0 &lt;0.3.0&#x27;</span></span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">dependencies:</span><br>  <span class="hljs-attr">flutter_ume:</span> <span class="hljs-string">&#x27;&gt;=0.2.0 &lt;0.3.0&#x27;</span><br></code></pre></td></tr></table></figure></li>
 </ol>
              
           </div>
@@ -517,7 +552,7 @@
           <div class="content">
             
               <h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>rootDir&#x2F;build.gradle</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">allprojects</span> &#123;</span><br><span class="line">    <span class="keyword">repositories</span> &#123;</span><br><span class="line">        ...</span><br><span class="line">        google &#123; url <span class="string">&#x27;https://maven.aliyun.com/repository/google&#x27;</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">allprojects</span> &#123;<br>    <span class="hljs-keyword">repositories</span> &#123;<br>        ...<br>        google &#123; url <span class="hljs-string">&#x27;https://maven.aliyun.com/repository/google&#x27;</span> &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
              
           </div>
         </div>
@@ -561,56 +596,13 @@
         </div>
           <div class="content">
             
-              <h2 id="commit-message-格式如下"><a href="#commit-message-格式如下" class="headerlink" title="commit message 格式如下"></a>commit message 格式如下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:emoji: 主题</span><br><span class="line"></span><br><span class="line">提交信息主体</span><br><span class="line"></span><br><span class="line">Ref &lt;###&gt;</span><br></pre></td></tr></table></figure>
+              <h2 id="commit-message-格式如下"><a href="#commit-message-格式如下" class="headerlink" title="commit message 格式如下"></a>commit message 格式如下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">:emoji: 主题<br><br>提交信息主体<br><br>Ref &lt;###&gt;<br></code></pre></td></tr></table></figure>
              
           </div>
         </div>
       <div class="post-footer">
         
         <div class="readmore"><a href="/2021/11/10/gitlab-emoji/">Read More »</a></div>   
-        
-    </div>
-    
-      <div class="recent-post-item">
-          <div class="post-title ">
-            <a href="/2020/12/30/SQLServerUUID/">SQL Server UUID</a>
-          </div>
-          <div class="post-meta">
-            
-            
-              <div class="post-meta-item date">
-                <span title="Created 2020.12.30"><i class="far fa-calendar-alt"></i> 2020.12.30</span>
-              </div>
-              <div class="post-meta-item updated">
-                <span title="Updated 2023.04.16"><i class="far fa-calendar-check"></i> 2023.04.16</span>
-              </div>
-             
-            
-              <div class="post-meta-item categories">
-                
-                  <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/SQL-Server/">SQL Server</a>
-                
-              </div>
-             
-            
-             <div class="post-meta-item wordcount">
-                
-                  <i class="fas fa-pencil-alt"></i> <span class="post-count">34 words</span>
-                   
-                
-                  <i class="far fa-clock"></i> <span class="post-count">1 min</span>
-                                       
-              </div>
-             
-        </div>
-          <div class="content">
-            
-                  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">function</span> [dbo].uuid(<span class="variable">@id</span> <span class="type">varchar</span>(<span class="number">36</span>))</span><br><span class="line"><span class="keyword">returns</span> <span class="type">varchar</span>(<span class="number">48</span>)</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"> <span class="keyword">declare</span> <span class="variable">@ret</span> <span class="type">varchar</span>(<span class="number">48</span>)</span><br><span class="line"> <span class="keyword">select</span> <span class="variable">@ret</span><span class="operator">=</span>format(getdate(),<span class="string">&#x27;yyyyMMddHHmmss&#x27;</span>)<span class="operator">+</span><span class="built_in">lower</span>(replace(<span class="variable">@id</span>,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"> <span class="keyword">return</span> <span class="variable">@ret</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> dbo.uuid(NEWID())</span><br></pre></td></tr></table></figure>
-
-             
-          </div>
-        </div>
-      <div class="post-footer">
         
     </div>
     
@@ -646,7 +638,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

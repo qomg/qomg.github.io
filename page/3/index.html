@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -186,6 +183,49 @@
     
       <div class="recent-post-item">
           <div class="post-title ">
+            <a href="/2020/12/30/SQLServerUUID/">SQL Server UUID</a>
+          </div>
+          <div class="post-meta">
+            
+            
+              <div class="post-meta-item date">
+                <span title="Created 2020.12.30"><i class="far fa-calendar-alt"></i> 2020.12.30</span>
+              </div>
+              <div class="post-meta-item updated">
+                <span title="Updated 2023.04.16"><i class="far fa-calendar-check"></i> 2023.04.16</span>
+              </div>
+             
+            
+              <div class="post-meta-item categories">
+                
+                  <i class="fas fa-inbox article-meta__icon"></i> <a href="/categories/SQL-Server/">SQL Server</a>
+                
+              </div>
+             
+            
+             <div class="post-meta-item wordcount">
+                
+                  <i class="fas fa-pencil-alt"></i> <span class="post-count">34 words</span>
+                   
+                
+                  <i class="far fa-clock"></i> <span class="post-count">1 min</span>
+                                       
+              </div>
+             
+        </div>
+          <div class="content">
+            
+                  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">function</span> [dbo].uuid(<span class="hljs-variable">@id</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">36</span>))<br><span class="hljs-keyword">returns</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">48</span>)<br><span class="hljs-keyword">as</span><br><span class="hljs-keyword">begin</span><br> <span class="hljs-keyword">declare</span> <span class="hljs-variable">@ret</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">48</span>)<br> <span class="hljs-keyword">select</span> <span class="hljs-variable">@ret</span><span class="hljs-operator">=</span>format(getdate(),<span class="hljs-string">&#x27;yyyyMMddHHmmss&#x27;</span>)<span class="hljs-operator">+</span><span class="hljs-built_in">lower</span>(replace(<span class="hljs-variable">@id</span>,<span class="hljs-string">&#x27;-&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>))<br> <span class="hljs-keyword">return</span> <span class="hljs-variable">@ret</span><br><span class="hljs-keyword">end</span><br><br><span class="hljs-keyword">select</span> dbo.uuid(NEWID())<br></code></pre></td></tr></table></figure>
+
+             
+          </div>
+        </div>
+      <div class="post-footer">
+        
+    </div>
+    
+      <div class="recent-post-item">
+          <div class="post-title ">
             <a href="/2018/11/14/docker-run-mssql-server-linux/">Docker run MSSQL Server Linux</a>
           </div>
           <div class="post-meta">
@@ -212,7 +252,7 @@
         </div>
           <div class="content">
             
-              <h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull microsoft/mssql-server-linux</span><br></pre></td></tr></table></figure>
+              <h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull microsoft/mssql-server-linux<br></code></pre></td></tr></table></figure>
              
           </div>
         </div>
@@ -392,7 +432,7 @@
         </div>
           <div class="content">
             
-              <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br><span class="line"><span class="built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(<span class="built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”</span><br></pre></td></tr></table></figure>
+              <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> adbscreenshot=”adb -d shell screencap -p &gt; $(<span class="hljs-built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”<br><span class="hljs-built_in">alias</span> adbscreenshot=”adb -d shell screencap -p | perl -pe ‘s/\x0D\x0A/\x0A/g’ &gt; $(<span class="hljs-built_in">date</span> +”%Y-%m-%d%H-%M-%S”).png”<br></code></pre></td></tr></table></figure>
              
           </div>
         </div>
@@ -433,7 +473,7 @@
               <ul>
 <li>1、function member</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> onClick: () -&gt; <span class="built_in">Unit</span> = …</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">val</span> onClick: () -&gt; <span class="hljs-built_in">Unit</span> = …<br></code></pre></td></tr></table></figure>
              
           </div>
         </div>
@@ -511,7 +551,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

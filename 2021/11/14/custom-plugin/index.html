@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -214,27 +211,27 @@
 <li><p><code>flutter create -t package flutter_ume_kit_analysis</code> 创建一个插件包</p>
 </li>
 <li><p>修改插件包的 <code>pubspec.yaml</code>，添加依赖</p>
- <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dependencies:</span></span><br><span class="line">  <span class="attr">flutter_ume:</span> <span class="string">&#x27;&gt;=0.2.0 &lt;0.3.0&#x27;</span></span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">dependencies:</span><br>  <span class="hljs-attr">flutter_ume:</span> <span class="hljs-string">&#x27;&gt;=0.2.0 &lt;0.3.0&#x27;</span><br></code></pre></td></tr></table></figure></li>
 </ol>
 <span id="more"></span>
 
 <ol start="3">
 <li><p>创建插件配置，实现 <code>Pluggable</code> 虚类</p>
- <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_ume/flutter_ume.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Analysis</span> <span class="keyword">implements</span> <span class="title">Pluggable</span> </span>&#123;</span><br><span class="line">    Analysis(&#123;Key? key&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    Widget buildWidget(BuildContext? context) &#123;</span><br><span class="line">        <span class="keyword">return</span> Container(</span><br><span class="line">            color: Colors.white,</span><br><span class="line">            width: <span class="number">100</span>,</span><br><span class="line">            height: <span class="number">100</span>,</span><br><span class="line">            child: <span class="keyword">const</span> Center(child: Text(<span class="string">&#x27;TODO&#x27;</span>)),</span><br><span class="line">        );</span><br><span class="line">    &#125; <span class="comment">// 返回插件面板</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> name =&gt; <span class="string">&#x27;Analysis&#x27;</span>; <span class="comment">// 插件名称</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="built_in">String</span> <span class="keyword">get</span> displayName =&gt; <span class="string">&#x27;Analysis&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="keyword">void</span> onTrigger() &#123;&#125; <span class="comment">// 点击插件面板图标时调用</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    ImageProvider&lt;<span class="built_in">Object</span>&gt; <span class="keyword">get</span> iconImageProvider =&gt;</span><br><span class="line">        MemoryImage(base64Decode(iconData)); <span class="comment">// 插件图标</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs dart"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;package:flutter_ume/flutter_ume.dart&#x27;</span>;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Analysis</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Pluggable</span> </span>&#123;<br>    Analysis(&#123;Key? key&#125;);<br><br>    <span class="hljs-meta">@override</span><br>    Widget buildWidget(BuildContext? context) &#123;<br>        <span class="hljs-keyword">return</span> Container(<br>            color: Colors.white,<br>            width: <span class="hljs-number">100</span>,<br>            height: <span class="hljs-number">100</span>,<br>            child: <span class="hljs-keyword">const</span> Center(child: Text(<span class="hljs-string">&#x27;TODO&#x27;</span>)),<br>        );<br>    &#125; <span class="hljs-comment">// 返回插件面板</span><br><br>    <span class="hljs-meta">@override</span><br>    <span class="hljs-built_in">String</span> <span class="hljs-keyword">get</span> name =&gt; <span class="hljs-string">&#x27;Analysis&#x27;</span>; <span class="hljs-comment">// 插件名称</span><br><br>    <span class="hljs-meta">@override</span><br>    <span class="hljs-built_in">String</span> <span class="hljs-keyword">get</span> displayName =&gt; <span class="hljs-string">&#x27;Analysis&#x27;</span>;<br><br>    <span class="hljs-meta">@override</span><br>    <span class="hljs-keyword">void</span> onTrigger() &#123;&#125; <span class="hljs-comment">// 点击插件面板图标时调用</span><br><br>    <span class="hljs-meta">@override</span><br>    ImageProvider&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> iconImageProvider =&gt;<br>        MemoryImage(base64Decode(iconData)); <span class="hljs-comment">// 插件图标</span><br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>在工程中引入自定义插件</p>
 <ol>
 <li><p>修改 <code>pubspec.yaml</code>，添加依赖</p>
- <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dev_dependencies:</span></span><br><span class="line">  <span class="attr">flutter_ume_kit_analysis:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">path/to/flutter_ume_kit_analysis</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">dev_dependencies:</span><br>  <span class="hljs-attr">flutter_ume_kit_analysis:</span><br>    <span class="hljs-attr">path:</span> <span class="hljs-string">path/to/flutter_ume_kit_analysis</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>执行 <code>flutter pub get</code></p>
 </li>
 <li><p>引入包</p>
- <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_ume_kit_analysis/flutter_ume_kit_analysis.dart&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dart"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;package:flutter_ume_kit_analysis/flutter_ume_kit_analysis.dart&#x27;</span>;<br></code></pre></td></tr></table></figure></li>
 </ol>
 </li>
 <li><p>在工程中注册插件</p>
- <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (kDebugMode) &#123;</span><br><span class="line">  PluginManager.instance</span><br><span class="line">    ..register(Analysis());</span><br><span class="line">  runApp(injectUMEWidget(child: MyApp(), enable: <span class="keyword">true</span>));</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  runApp(MyApp());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dart"><span class="hljs-keyword">if</span> (kDebugMode) &#123;<br>  PluginManager.instance<br>    ..register(Analysis());<br>  runApp(injectUMEWidget(child: MyApp(), enable: <span class="hljs-keyword">true</span>));<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>  runApp(MyApp());<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>运行代码</p>
 </li>
@@ -330,7 +327,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  

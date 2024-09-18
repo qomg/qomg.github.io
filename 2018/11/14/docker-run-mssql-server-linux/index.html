@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hans">
-    <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+    <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -56,8 +54,7 @@
   
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
-</html>
+</head>
     
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
@@ -210,23 +207,23 @@
 
   
   <div class="content">
-        <div><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull microsoft/mssql-server-linux</span><br></pre></td></tr></table></figure>
+        <div><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull microsoft/mssql-server-linux<br></code></pre></td></tr></table></figure>
 
 <span id="more"></span>
 
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p><strong>dont modify below string &lt;YourStrong!PasswOrd&gt;</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">&#x27;ACCEPT_EULA=Y&#x27;</span> -e <span class="string">&#x27;SA_PASSWORD=&lt;YourStrong!PasswOrd&gt;&#x27;</span> \</span><br><span class="line">-p 1433:1433 –name docker-sql-server -d microsoft/mssql-server-linux</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run -e <span class="hljs-string">&#x27;ACCEPT_EULA=Y&#x27;</span> -e <span class="hljs-string">&#x27;SA_PASSWORD=&lt;YourStrong!PasswOrd&gt;&#x27;</span> \<br>-p 1433:1433 –name docker-sql-server -d microsoft/mssql-server-linux<br></code></pre></td></tr></table></figure>
 
 
 <h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><p><strong>you should replace YourNewStrong!PasswOrd with your password</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it docker-sql-server /opt/mssql-tools/bin/sqlcmd \</span><br><span class="line">-S localhost -U SA -P <span class="string">&#x27;&lt;YourStrong!PasswOrd&gt;&#x27;</span> \</span><br><span class="line">-Q <span class="string">&#x27;ALTER LOGIN SA WITH PASSWORD=&quot;YourNewStrong!PasswOrd&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">exec</span> -it docker-sql-server /opt/mssql-tools/bin/sqlcmd \<br>-S localhost -U SA -P <span class="hljs-string">&#x27;&lt;YourStrong!PasswOrd&gt;&#x27;</span> \<br>-Q <span class="hljs-string">&#x27;ALTER LOGIN SA WITH PASSWORD=&quot;YourNewStrong!PasswOrd&quot;&#x27;</span><br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="重启-x2F-启动"><a href="#重启-x2F-启动" class="headerlink" title="重启&#x2F;启动"></a><del>重启&#x2F;启动</del></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart docker-sql-server</span><br></pre></td></tr></table></figure>
+<h2 id="重启-x2F-启动"><a href="#重启-x2F-启动" class="headerlink" title="重启&#x2F;启动"></a><del>重启&#x2F;启动</del></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker restart docker-sql-server<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="检查状态"><a href="#检查状态" class="headerlink" title="检查状态"></a>检查状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<h2 id="检查状态"><a href="#检查状态" class="headerlink" title="检查状态"></a>检查状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps -a<br></code></pre></td></tr></table></figure>
 
 
 <h2 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h2><p>connect server with sql operations studio or navicat</p>
@@ -321,7 +318,7 @@
         
           <div class="icp-info">
             
-          <a href="https://beian.miit.gov.cn/" target="_blank"> 粤ICP备2020127049号</a>
+          <a href="" target="_blank"> </a>
         </div>
         
     </div>  
