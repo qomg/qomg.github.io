@@ -26,7 +26,7 @@
 
   
 
-  <title>Android课题研究 | mind pieces</title>
+  <title>Design Patterns | mind pieces</title>
 
   
 
@@ -179,26 +179,26 @@
 
     
 <article id="post">
-  <div class="post-title">Android课题研究</div>
+  <div class="post-title">Design Patterns</div>
   
 <div class="post-meta">
     
     
       <div class="post-meta-item date">
-        <span title="Created 2024.09.18"><i class="far fa-calendar-alt"></i> 2024.09.18</span>
+        <span title="Created 2025.12.01"><i class="far fa-calendar-alt"></i> 2025.12.01</span>
       </div>
       <div class="post-meta-item updated">
-        <span title="Updated 2024.09.18"><i class="far fa-calendar-check"></i> 2024.09.18</span>
+        <span title="Updated 2025.12.01"><i class="far fa-calendar-check"></i> 2025.12.01</span>
       </div>
      
      
     
      <div class="post-meta-item wordcount">
         
-          <i class="fas fa-pencil-alt"></i> <span class="post-count">1.4k words</span>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">1.9k words</span>
            
         
-          <i class="far fa-clock"></i> <span class="post-count">5 min</span>
+          <i class="far fa-clock"></i> <span class="post-count">6 min</span>
                                
       </div>
      
@@ -207,83 +207,58 @@
 
   
   <div class="content">
-        <div><p>MVP 即 Minimum Viable Product，通过做出能满足最基本功能的产品，不断接受用户反馈，快速迭代，直到做出真正符合需求的好产品。</p>
-<h2 id="一、Android应用架构治理"><a href="#一、Android应用架构治理" class="headerlink" title="一、Android应用架构治理"></a>一、Android应用架构治理</h2><ol>
-<li>对源码进行依赖分析、静态检查、自动化重构，构建合理的组件&#x2F;模块化方案</li>
-<li>编写Gradle&#x2F;AS插件，在编译时优化构建及插桩处理</li>
-<li>对构建过程和产物进行IR分析（bytecode、Smali），提升应用安全性稳定性</li>
-<li>规范和清晰的源码结构</li>
-<li>完善CI&#x2F;CD流水线</li>
-<li>以更加深入底层的方式，分析APK</li>
-</ol>
-<h2 id="二、Android应用质量治理"><a href="#二、Android应用质量治理" class="headerlink" title="二、Android应用质量治理"></a>二、Android应用质量治理</h2><p>切入点初步定三个</p>
-<h3 id="1-高性能"><a href="#1-高性能" class="headerlink" title="1. 高性能"></a>1. 高性能</h3><ul>
-<li>描述：精简apk尺寸，提升启动速度，引入baseline、benchmark、jacoco、splitapks、lint、profile等用以优化应用质量</li>
-<li>措施：<br>  a) 检查apk是否可精简，指定 cpu架构使用 splitapks 拆包<br>  b) profile测量启动速度<br>  c) baseline 打包（源码层面）<br>  d) benchmark 对代码进行基准化分析（源码层面）<br>  e) jacoco扫描代码覆盖率（源码层面）<br>  f) 封装更加强大符合实际使用的lint规则及lintFix方案，剔除坏味代码（源码层面）</li>
+        <div><h3 id="《Design-Patterns-Elements-of-Reusable-Object-Oriented-Software》核心内容总结"><a href="#《Design-Patterns-Elements-of-Reusable-Object-Oriented-Software》核心内容总结" class="headerlink" title="《Design Patterns: Elements of Reusable Object-Oriented Software》核心内容总结"></a>《Design Patterns: Elements of Reusable Object-Oriented Software》核心内容总结</h3><h4 id="一、书籍定位与目标"><a href="#一、书籍定位与目标" class="headerlink" title="一、书籍定位与目标"></a><strong>一、书籍定位与目标</strong></h4><p>《Design Patterns: Elements of Reusable Object-Oriented Software》（以下简称《Design Patterns》）是<strong>Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides</strong>（四人合称“Gang of Four”，即“四人帮”）于1994年出版的<strong>面向对象设计领域经典著作</strong>。其核心目标是解决<strong>软件设计中重复出现的问题</strong>，通过总结和提炼这些问题的通用解决方案（即“设计模式”），帮助开发者提升代码的<strong>可复用性</strong>、<strong>可维护性</strong>和<strong>灵活性</strong>，推动面向对象设计从“经验驱动”向“体系化”转变。</p>
+<h4 id="二、设计模式的核心定义与要素"><a href="#二、设计模式的核心定义与要素" class="headerlink" title="二、设计模式的核心定义与要素"></a><strong>二、设计模式的核心定义与要素</strong></h4><p>《Design Patterns》对“设计模式”的定义是：<strong>每一个模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心</strong>。这一定义强调了设计模式的<strong>通用性</strong>（解决重复问题）和<strong>本质性</strong>（聚焦问题核心，而非具体实现）。  </p>
+<p>一个完整的设计模式通常包含以下四个基本要素：  </p>
+<ul>
+<li><strong>模式名称（Pattern Name）</strong>：一个简洁的助记名（如“单例模式”“工厂方法模式”），用于快速识别和沟通模式的核心意图；  </li>
+<li><strong>问题（Problem）</strong>：描述模式的适用场景（即“何时使用该模式”），包括设计中需要解决的具体问题（如“如何创建对象而不暴露创建逻辑”“如何扩展对象功能而不修改原有代码”）；  </li>
+<li><strong>解决方案（Solution）</strong>：描述模式的<strong>组成成分</strong>（如类、对象）、<strong>关系</strong>（如继承、组合）及<strong>职责分配</strong>（如“工厂类负责创建对象，客户端类通过工厂获取对象”），强调“如何做”而非“做什么”；  </li>
+<li><strong>效果（Consequences）</strong>：分析模式应用的<strong>优缺点</strong>（如“提升扩展性但可能增加复杂度”“降低耦合度但可能影响性能”），帮助开发者在“权衡利弊”后选择合适的模式。</li>
 </ul>
-<h3 id="2-高可靠"><a href="#2-高可靠" class="headerlink" title="2. 高可靠"></a>2. 高可靠</h3><ul>
-<li>描述：检查应用是否加固（扫描apk），是否存在崩溃防护、错误上报、网络安全防护、文件加密存储及应用运行权限是否合规（扫描源码）</li>
-<li>措施：封装相应的各类工具（gradle插件、扫描平台、上报监控平台）</li>
-<li>拓展：融合应用灰度发布方案</li>
+<h4 id="三、设计模式的三大分类"><a href="#三、设计模式的三大分类" class="headerlink" title="三、设计模式的三大分类"></a><strong>三、设计模式的三大分类</strong></h4><p>《Design Patterns》将23种经典设计模式分为<strong>三大类</strong>，覆盖了面向对象设计的不同场景和需求：  </p>
+<h5 id="1-创建型模式（Creational-Patterns）"><a href="#1-创建型模式（Creational-Patterns）" class="headerlink" title="1. 创建型模式（Creational Patterns）"></a><strong>1. 创建型模式（Creational Patterns）</strong></h5><p>关注<strong>对象的创建过程</strong>，将对象的创建与使用分离，降低系统耦合度。主要包括：  </p>
+<ul>
+<li><strong>单例模式（Singleton）</strong>：确保一个类只有一个实例，并提供全局访问点（如“系统配置管理器”）；  </li>
+<li><strong>工厂方法模式（Factory Method）</strong>：定义一个创建对象的接口，由子类决定实例化哪个类（如“日志记录器工厂”）；  </li>
+<li><strong>抽象工厂模式（Abstract Factory）</strong>：提供一个接口，用于创建<strong>相关或依赖对象的家族</strong>（如“跨平台的UI组件工厂”）；  </li>
+<li><strong>建造者模式（Builder）</strong>：将复杂对象的构建与表示分离，通过“逐步构建”方式创建对象（如“文档生成器”）；  </li>
+<li><strong>原型模式（Prototype）</strong>：通过克隆现有对象来创建新对象（如“游戏中的角色克隆”）。</li>
 </ul>
-<h3 id="3-高效交互"><a href="#3-高效交互" class="headerlink" title="3. 高效交互"></a>3. 高效交互</h3><ul>
-<li>描述：前期埋点记录页面路径、操作留痕、功能曝光率等，常用功能提级减少交互路径方便用户操作，热区功能支持动态配置等，根据各大厂UI规范给app打分（配色、文字、图标、圆角、阴影等，APP提交运行截图）</li>
-<li>措施：开发埋点上报插件，UI规范审查指南</li>
+<h5 id="2-结构型模式（Structural-Patterns）"><a href="#2-结构型模式（Structural-Patterns）" class="headerlink" title="2. 结构型模式（Structural Patterns）"></a><strong>2. 结构型模式（Structural Patterns）</strong></h5><p>关注<strong>类和对象的组合方式</strong>，通过继承或组合实现功能的扩展。主要包括：  </p>
+<ul>
+<li><strong>适配器模式（Adapter）</strong>：将一个类的接口转换成客户希望的另一个接口（如“旧系统与新系统的接口适配”）；  </li>
+<li><strong>桥接模式（Bridge）</strong>：将<strong>抽象部分</strong>与<strong>实现部分</strong>分离，使两者可以独立变化（如“图形绘制中的形状与颜色分离”）；  </li>
+<li><strong>装饰器模式（Decorator）</strong>：动态地给对象添加额外职责（如“给文本添加边框、颜色等效果”）；  </li>
+<li><strong>外观模式（Facade）</strong>：为子系统提供<strong>统一的简化接口</strong>（如“电商系统的订单处理外观”）；  </li>
+<li><strong>享元模式（Flyweight）</strong>：通过<strong>共享技术</strong>复用大量细粒度对象（如“文本编辑器中的字符缓存”）。</li>
 </ul>
-<h2 id="三、可视化协同设计平台"><a href="#三、可视化协同设计平台" class="headerlink" title="三、可视化协同设计平台"></a>三、可视化协同设计平台</h2><ul>
-<li>描述：一个用于开发原生（Android&#x2F;iOS）应用的低代码平台，通过拖拽实现可视化应用设计，提供实时预览，减少应用开发过程中产品设计开发的沟通成本，最大化保证应用交付时UI还原度</li>
-<li>预期：包含一系列元组化的UI套件，Android和iOS是不同的两套UI代码。在这个基础上抽象一层UI描述文件。开发一个跨平台桌面端应用，包含仪表盘、我的、设置三个常规功能入口，实现项目管理、资源管理、账号管理三个基础模块。</li>
-<li>目标：开发一个跨平台桌面端应用，通过拖拽符合设计规范的UI套件进行原型设计和UI创意设计。开发可以直接使用该应用生成的代码，只需进行少许功能完善联调即可。</li>
+<h5 id="3-行为型模式（Behavioral-Patterns）"><a href="#3-行为型模式（Behavioral-Patterns）" class="headerlink" title="3. 行为型模式（Behavioral Patterns）"></a><strong>3. 行为型模式（Behavioral Patterns）</strong></h5><p>关注<strong>对象之间的通信与协作</strong>，解决“对象间如何交互”的问题。主要包括：  </p>
+<ul>
+<li><strong>策略模式（Strategy）</strong>：定义一系列算法，将每个算法封装起来并使其可以相互替换（如“排序算法的动态切换”）；  </li>
+<li><strong>模板方法模式（Template Method）</strong>：定义一个操作中的<strong>算法骨架</strong>，将某些步骤延迟到子类中（如“文档处理的通用流程”）；  </li>
+<li><strong>观察者模式（Observer）</strong>：定义对象间的一对多依赖关系，当一个对象状态改变时，所有依赖它的对象都会收到通知（如“事件监听机制”）；  </li>
+<li><strong>迭代器模式（Iterator）</strong>：提供一种方法顺序访问聚合对象中的各个元素，而不暴露其内部表示（如“集合的遍历”）；  </li>
+<li><strong>中介者模式（Mediator）</strong>：通过一个中介对象封装一系列对象交互，减少对象间的直接依赖（如“聊天室中的消息转发”）。</li>
 </ul>
-<h2 id="四、Android应用性能优化"><a href="#四、Android应用性能优化" class="headerlink" title="四、Android应用性能优化"></a>四、Android应用性能优化</h2><ul>
-<li>描述：应用运行时性能检测记录5个方面（包含CPU、帧率、内存、网络、启动时延），建立15项性能指标对应用进行优化。同时考虑使用2-3个性能监控工具，在开发过程中（或CI&#x2F;CD时）进行性能监控，及时发现问题。</li>
-<li>预期：包含性能检测记录上报、影响性能的代码检测以及具体优化方案源码，使用三方工具对应用进行性能监控（内存泄漏、CPU占用率、网络状况、卡顿分析等），输出性能优化最佳实践。</li>
-<li>目标：打造一套Android应用性能优化解决方案，以期在应用迭代过程中，始终保持良好的用户体验和稳定性。</li>
-<li>风险：Android设备太过碎片化（厂商、定制操作系统、SDK版本、屏幕尺寸、CPU架构、组网等），有太多系统版本需要兼容（Android6.0~14 存在 11 个版本的SDK），源码可测性严重不足（不包含单元测试、集成测试、自动化测试用例）</li>
+<h4 id="四、面向对象设计的七大原则"><a href="#四、面向对象设计的七大原则" class="headerlink" title="四、面向对象设计的七大原则"></a><strong>四、面向对象设计的七大原则</strong></h4><p>《Design Patterns》的底层逻辑是<strong>七大面向对象设计原则</strong>，这些原则是设计模式的“灵魂”，指导着模式的定义和应用：  </p>
+<ul>
+<li><strong>开闭原则（Open Closed Principle, OCP）</strong>：软件实体（类、模块、函数）应对<strong>扩展开放</strong>，对<strong>修改关闭</strong>（即“新增功能时不修改原有代码”）；  </li>
+<li><strong>里氏代换原则（Liskov Substitution Principle, LSP）</strong>：任何基类可以出现的地方，子类一定可以出现（即“子类必须能够替换基类，且不影响功能”）；  </li>
+<li><strong>依赖倒转原则（Dependency Inversion Principle, DIP）</strong>：高层模块不应依赖低层模块，两者都应依赖<strong>抽象</strong>（即“面向接口编程，而非面向实现”）；  </li>
+<li><strong>接口隔离原则（Interface Segregation Principle, ISP）</strong>：客户端不应依赖它不需要的接口（即“接口应细化，避免‘胖接口’”）；  </li>
+<li><strong>迪米特法则（Law of Demeter, LoD）</strong>：一个实体应尽量少地与其他实体发生相互作用（即“减少耦合，避免‘牵一发而动全身’”）；  </li>
+<li><strong>合成复用原则（Composite Reuse Principle, CRP）</strong>：优先使用<strong>组合&#x2F;聚合</strong>（而非继承）实现复用（即“通过对象组合扩展功能，而非通过继承扩展类”）；  </li>
+<li><strong>单一职责原则（Single Responsibility Principle, SRP）</strong>：一个类应只有一个引起它变化的原因（即“避免‘万能类’，职责单一”）。</li>
 </ul>
-<h3 id="1-性能检测"><a href="#1-性能检测" class="headerlink" title="1. 性能检测"></a>1. 性能检测</h3><ol>
-<li>CPU使用情况</li>
-<li>帧率优化&#x2F;卡顿统计</li>
-<li>内存泄漏及资源占用管理</li>
-<li>网络响应及弱网体验</li>
-<li>启动速度和时延</li>
-</ol>
-<h3 id="2-性能指标"><a href="#2-性能指标" class="headerlink" title="2. 性能指标"></a>2. 性能指标</h3><ol>
-<li>安装文件大小</li>
-<li>Context对象泄漏</li>
-<li>低配手机适配</li>
-<li>网络请求加密</li>
-<li>废弃API禁止使用</li>
-<li>离线模式（提升用户体验）</li>
-<li>帧率优化（适配高刷）</li>
-<li>对象装箱和拆箱（低内存）</li>
-<li>冷启动速度</li>
-<li>布局加载耗时</li>
-<li>内存使用率（减少gc）</li>
-<li>多线程并发（响应速度）</li>
-<li>应用架构治理</li>
-<li>for循环加入内联方法</li>
-<li>其他JVM调优方案</li>
-</ol>
-<h3 id="2-最佳实践"><a href="#2-最佳实践" class="headerlink" title="2. 最佳实践"></a>2. 最佳实践</h3><ol>
-<li>多媒体文件缩量（本地和远端资源）</li>
-<li>分配优先级按需拉取&#x2F;上传数据</li>
-<li>定位&#x2F;通知&#x2F;屏幕唤醒等耗电管理</li>
-<li>使用性能监控工具（兼容性及性能评分）</li>
-</ol>
-<h3 id="4-性能监控工具"><a href="#4-性能监控工具" class="headerlink" title="4. 性能监控工具"></a>4. 性能监控工具</h3><ol>
-<li>Android Vitals（Crash 和 ANR）</li>
-<li>JankStats Library（帧率、UI状态报告、卡顿报告）</li>
-<li>Benchmark test（CI 流程中集成）</li>
-<li>Android Profiler （内存、CPU、网络、耗电、其他手机资源）</li>
-<li>Firebase Performance Monitoring（记录运行数据，启动耗时、屏幕渲染、网络请求）</li>
-</ol>
-<h3 id="5-挑战与瓶颈"><a href="#5-挑战与瓶颈" class="headerlink" title="5. 挑战与瓶颈"></a>5. 挑战与瓶颈</h3><ol>
-<li>手机设备太过碎片化（厂商、定制操作系统、SDK版本、屏幕尺寸、CPU架构、组网）</li>
-<li>太多Android系统版本需要兼容（6.0~14 存在 11 个版本的SDK）</li>
-<li>功能稳定性测试不足（单元测试、集成测试、自动化测试）</li>
-</ol>
-<h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h3><p>应用迭代过程中始终保持稳定运行、高效用户体验，性能优化是不可或缺的一环。</p>
+<h4 id="五、设计模式的价值与意义"><a href="#五、设计模式的价值与意义" class="headerlink" title="五、设计模式的价值与意义"></a><strong>五、设计模式的价值与意义</strong></h4><p>《Design Patterns》的价值在于<strong>将“经验”转化为“体系”</strong>：  </p>
+<ul>
+<li><strong>提升代码复用</strong>：通过模式复用已有的解决方案，避免重复劳动（如“工厂模式”可复用于多个需要创建对象的场景）；  </li>
+<li><strong>增强可维护性</strong>：模式使代码结构更清晰（如“单一职责原则”让类的职责更明确），修改时只需调整局部代码，不会影响整体；  </li>
+<li><strong>提高灵活性</strong>：模式支持“扩展而非修改”（如“开闭原则”让系统能轻松应对新需求，如新增一种产品类型时，只需添加新的工厂类）；  </li>
+<li><strong>促进团队协作</strong>：模式是“通用语言”，团队成员能快速理解彼此的设计意图（如“观察者模式”能让开发者快速识别“事件驱动”的设计逻辑）。</li>
+</ul>
+<p>《Design Patterns: Elements of Reusable Object-Oriented Software》不仅是一本“设计模式手册”，更是一本“面向对象设计哲学书”。它教会开发者的不仅是“如何使用模式”，更是“如何思考设计”——通过“问题-解决方案-权衡”的逻辑，让设计更合理、更可持续。</p>
 </div>
         
           <div class="post-copyright">
@@ -291,7 +266,7 @@
                       <span> Author: qomg</span>
                   </div>
                   <div class="copyright-item">
-                      <span> Link: <a href="http://qomg.github.io/2024/09/18/Android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/">http://qomg.github.io/2024/09/18/Android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/</a></span>
+                      <span> Link: <a href="http://qomg.github.io/2025/12/01/Design-Patterns/">http://qomg.github.io/2025/12/01/Design-Patterns/</a></span>
                   </div>
                   <div class="copyright-item">
                       <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
@@ -320,12 +295,12 @@
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/2025/12/01/Clean-Code/" >Clean Code<i class="fa fa-chevron-left"></i></a>
+            <a href="/2025/12/01/Domain-Driven-Design/" >Domain Driven Design<i class="fa fa-chevron-left"></i></a>
         </div>
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2024/02/26/BaseViewModel-with-STATE/" >BaseViewModel with STATE<i class="fa fa-chevron-right"></i></a>
+            <a href="/2025/12/01/Coding-Interview/" >Coding Interview<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

@@ -26,7 +26,7 @@
 
   
 
-  <title>Android课题研究 | mind pieces</title>
+  <title>Domain Driven Design | mind pieces</title>
 
   
 
@@ -179,23 +179,23 @@
 
     
 <article id="post">
-  <div class="post-title">Android课题研究</div>
+  <div class="post-title">Domain Driven Design</div>
   
 <div class="post-meta">
     
     
       <div class="post-meta-item date">
-        <span title="Created 2024.09.18"><i class="far fa-calendar-alt"></i> 2024.09.18</span>
+        <span title="Created 2025.12.01"><i class="far fa-calendar-alt"></i> 2025.12.01</span>
       </div>
       <div class="post-meta-item updated">
-        <span title="Updated 2024.09.18"><i class="far fa-calendar-check"></i> 2024.09.18</span>
+        <span title="Updated 2025.12.01"><i class="far fa-calendar-check"></i> 2025.12.01</span>
       </div>
      
      
     
      <div class="post-meta-item wordcount">
         
-          <i class="fas fa-pencil-alt"></i> <span class="post-count">1.4k words</span>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">1.6k words</span>
            
         
           <i class="far fa-clock"></i> <span class="post-count">5 min</span>
@@ -207,83 +207,40 @@
 
   
   <div class="content">
-        <div><p>MVP 即 Minimum Viable Product，通过做出能满足最基本功能的产品，不断接受用户反馈，快速迭代，直到做出真正符合需求的好产品。</p>
-<h2 id="一、Android应用架构治理"><a href="#一、Android应用架构治理" class="headerlink" title="一、Android应用架构治理"></a>一、Android应用架构治理</h2><ol>
-<li>对源码进行依赖分析、静态检查、自动化重构，构建合理的组件&#x2F;模块化方案</li>
-<li>编写Gradle&#x2F;AS插件，在编译时优化构建及插桩处理</li>
-<li>对构建过程和产物进行IR分析（bytecode、Smali），提升应用安全性稳定性</li>
-<li>规范和清晰的源码结构</li>
-<li>完善CI&#x2F;CD流水线</li>
-<li>以更加深入底层的方式，分析APK</li>
+        <div><h3 id="《Domain-Driven-Design-Tackling-Complexity-in-the-Heart-of-Software》核心内容总结"><a href="#《Domain-Driven-Design-Tackling-Complexity-in-the-Heart-of-Software》核心内容总结" class="headerlink" title="《Domain-Driven Design: Tackling Complexity in the Heart of Software》核心内容总结"></a>《Domain-Driven Design: Tackling Complexity in the Heart of Software》核心内容总结</h3><h4 id="一、书籍定位与目标"><a href="#一、书籍定位与目标" class="headerlink" title="一、书籍定位与目标"></a><strong>一、书籍定位与目标</strong></h4><p>《Domain-Driven Design: Tackling Complexity in the Heart of Software》（以下简称《DDD》）是Eric Evans于2004年提出的<strong>领域驱动设计（Domain-Driven Design, DDD）</strong>经典著作，核心目标是解决<strong>复杂业务系统的软件设计问题</strong>。书中强调：<strong>软件的核心是业务，设计应围绕业务模型展开，而非技术实现</strong>。通过建立<strong>领域模型</strong>（Domain Model），将业务规则、流程与软件结构统一，帮助团队应对需求变更、提升系统可维护性。</p>
+<h4 id="二、核心概念：领域与模型"><a href="#二、核心概念：领域与模型" class="headerlink" title="二、核心概念：领域与模型"></a><strong>二、核心概念：领域与模型</strong></h4><ol>
+<li><strong>领域（Domain）</strong>：<br>指软件要解决的业务问题空间（如电商的“订单处理”、银行的“转账系统”）。领域是动态的，包含<strong>实体</strong>（如“用户”“商品”）、<strong>规则</strong>（如“订单总价&#x3D;商品价格×数量”）、<strong>流程</strong>（如“下单→支付→发货”），是DDD的“问题源”。  </li>
+<li><strong>领域模型（Domain Model）</strong>：<br>是领域的<strong>抽象表示</strong>，通过<strong>对象</strong>（实体、值对象）、<strong>关系</strong>（关联、聚合）封装业务逻辑。模型的核心是<strong>业务语义</strong>，而非技术细节（如数据库表结构）。例如，“用户订阅专栏”的领域模型会包含“用户”（实体，唯一标识）、“订阅”（实体，关联用户与专栏）、“专栏”（实体，包含标题、价格）等对象，以及“订阅有效期”“取消订阅”等业务规则。</li>
 </ol>
-<h2 id="二、Android应用质量治理"><a href="#二、Android应用质量治理" class="headerlink" title="二、Android应用质量治理"></a>二、Android应用质量治理</h2><p>切入点初步定三个</p>
-<h3 id="1-高性能"><a href="#1-高性能" class="headerlink" title="1. 高性能"></a>1. 高性能</h3><ul>
-<li>描述：精简apk尺寸，提升启动速度，引入baseline、benchmark、jacoco、splitapks、lint、profile等用以优化应用质量</li>
-<li>措施：<br>  a) 检查apk是否可精简，指定 cpu架构使用 splitapks 拆包<br>  b) profile测量启动速度<br>  c) baseline 打包（源码层面）<br>  d) benchmark 对代码进行基准化分析（源码层面）<br>  e) jacoco扫描代码覆盖率（源码层面）<br>  f) 封装更加强大符合实际使用的lint规则及lintFix方案，剔除坏味代码（源码层面）</li>
+<h4 id="三、关键原则：模型驱动与统一语言"><a href="#三、关键原则：模型驱动与统一语言" class="headerlink" title="三、关键原则：模型驱动与统一语言"></a><strong>三、关键原则：模型驱动与统一语言</strong></h4><ol>
+<li><strong>模型驱动设计（Model-Driven Design）</strong>：<br>强调<strong>模型是软件的核心</strong>，代码应直接反映模型（如“用户”类的方法应对应“用户”的业务行为，如<code>calculateTotalSubscriptionFee()</code>）。模型与代码的同步通过<strong>重构</strong>实现——当业务规则变化时，调整模型并同步修改代码，确保两者一致。  </li>
+<li><strong>统一语言（Ubiquitous Language）</strong>：<br>是团队（开发人员、领域专家、测试人员）<strong>共享的业务词汇表</strong>，用于描述领域模型。例如，“订单”“用户”“支付”等术语在模型、代码、文档、沟通中应保持一致，避免“技术术语”与“业务术语”的混淆（如“订单”在代码中叫<code>Order</code>，在文档中叫“订单”，在沟通中叫“订单”）。统一语言是<strong>减少沟通成本、确保需求对齐</strong>的关键。</li>
+</ol>
+<h4 id="四、战略设计：划分问题边界"><a href="#四、战略设计：划分问题边界" class="headerlink" title="四、战略设计：划分问题边界"></a><strong>四、战略设计：划分问题边界</strong></h4><p>战略设计关注<strong>如何将复杂领域分解为可管理的部分</strong>，核心工具包括：  </p>
+<ol>
+<li><strong>限界上下文（Bounded Context）</strong>：<br>定义领域的<strong>边界</strong>，每个上下文包含一个独立的领域模型（如“订单上下文”“支付上下文”）。上下文之间通过<strong>上下文映射</strong>（如“合作关系”“共享内核”）交互，避免模型冲突。例如，“订单”在“订单上下文”中是核心模型，但在“支付上下文”中可能只是“支付对象”的一部分。  </li>
+<li><strong>上下文映射（Context Map）</strong>：<br>描述限界上下文之间的关系，常见模式包括：  <ul>
+<li><strong>合作关系</strong>（两个上下文紧密协作，如“订单”与“支付”）；  </li>
+<li><strong>共享内核</strong>（两个上下文共享部分模型，如“用户”信息）；  </li>
+<li><strong>防腐层</strong>（一个上下文通过适配器与另一个上下文交互，如“订单”与“第三方物流系统”的交互）。</li>
 </ul>
-<h3 id="2-高可靠"><a href="#2-高可靠" class="headerlink" title="2. 高可靠"></a>2. 高可靠</h3><ul>
-<li>描述：检查应用是否加固（扫描apk），是否存在崩溃防护、错误上报、网络安全防护、文件加密存储及应用运行权限是否合规（扫描源码）</li>
-<li>措施：封装相应的各类工具（gradle插件、扫描平台、上报监控平台）</li>
-<li>拓展：融合应用灰度发布方案</li>
-</ul>
-<h3 id="3-高效交互"><a href="#3-高效交互" class="headerlink" title="3. 高效交互"></a>3. 高效交互</h3><ul>
-<li>描述：前期埋点记录页面路径、操作留痕、功能曝光率等，常用功能提级减少交互路径方便用户操作，热区功能支持动态配置等，根据各大厂UI规范给app打分（配色、文字、图标、圆角、阴影等，APP提交运行截图）</li>
-<li>措施：开发埋点上报插件，UI规范审查指南</li>
-</ul>
-<h2 id="三、可视化协同设计平台"><a href="#三、可视化协同设计平台" class="headerlink" title="三、可视化协同设计平台"></a>三、可视化协同设计平台</h2><ul>
-<li>描述：一个用于开发原生（Android&#x2F;iOS）应用的低代码平台，通过拖拽实现可视化应用设计，提供实时预览，减少应用开发过程中产品设计开发的沟通成本，最大化保证应用交付时UI还原度</li>
-<li>预期：包含一系列元组化的UI套件，Android和iOS是不同的两套UI代码。在这个基础上抽象一层UI描述文件。开发一个跨平台桌面端应用，包含仪表盘、我的、设置三个常规功能入口，实现项目管理、资源管理、账号管理三个基础模块。</li>
-<li>目标：开发一个跨平台桌面端应用，通过拖拽符合设计规范的UI套件进行原型设计和UI创意设计。开发可以直接使用该应用生成的代码，只需进行少许功能完善联调即可。</li>
-</ul>
-<h2 id="四、Android应用性能优化"><a href="#四、Android应用性能优化" class="headerlink" title="四、Android应用性能优化"></a>四、Android应用性能优化</h2><ul>
-<li>描述：应用运行时性能检测记录5个方面（包含CPU、帧率、内存、网络、启动时延），建立15项性能指标对应用进行优化。同时考虑使用2-3个性能监控工具，在开发过程中（或CI&#x2F;CD时）进行性能监控，及时发现问题。</li>
-<li>预期：包含性能检测记录上报、影响性能的代码检测以及具体优化方案源码，使用三方工具对应用进行性能监控（内存泄漏、CPU占用率、网络状况、卡顿分析等），输出性能优化最佳实践。</li>
-<li>目标：打造一套Android应用性能优化解决方案，以期在应用迭代过程中，始终保持良好的用户体验和稳定性。</li>
-<li>风险：Android设备太过碎片化（厂商、定制操作系统、SDK版本、屏幕尺寸、CPU架构、组网等），有太多系统版本需要兼容（Android6.0~14 存在 11 个版本的SDK），源码可测性严重不足（不包含单元测试、集成测试、自动化测试用例）</li>
-</ul>
-<h3 id="1-性能检测"><a href="#1-性能检测" class="headerlink" title="1. 性能检测"></a>1. 性能检测</h3><ol>
-<li>CPU使用情况</li>
-<li>帧率优化&#x2F;卡顿统计</li>
-<li>内存泄漏及资源占用管理</li>
-<li>网络响应及弱网体验</li>
-<li>启动速度和时延</li>
+</li>
 </ol>
-<h3 id="2-性能指标"><a href="#2-性能指标" class="headerlink" title="2. 性能指标"></a>2. 性能指标</h3><ol>
-<li>安装文件大小</li>
-<li>Context对象泄漏</li>
-<li>低配手机适配</li>
-<li>网络请求加密</li>
-<li>废弃API禁止使用</li>
-<li>离线模式（提升用户体验）</li>
-<li>帧率优化（适配高刷）</li>
-<li>对象装箱和拆箱（低内存）</li>
-<li>冷启动速度</li>
-<li>布局加载耗时</li>
-<li>内存使用率（减少gc）</li>
-<li>多线程并发（响应速度）</li>
-<li>应用架构治理</li>
-<li>for循环加入内联方法</li>
-<li>其他JVM调优方案</li>
+<h4 id="五、战术设计：细化模型细节"><a href="#五、战术设计：细化模型细节" class="headerlink" title="五、战术设计：细化模型细节"></a><strong>五、战术设计：细化模型细节</strong></h4><p>战术设计关注<strong>如何在限界上下文中实现领域模型</strong>，核心元素包括：  </p>
+<ol>
+<li><strong>实体（Entity）</strong>：<br>具有<strong>唯一标识</strong>（如用户ID、订单号）的对象，代表业务中的“独立个体”。实体的核心是“身份”，而非属性（如“用户”的“姓名”可变，但“用户ID”不变）。  </li>
+<li><strong>值对象（Value Object）</strong>：<br>没有唯一标识的对象，用于描述事物的<strong>属性或状态</strong>（如“地址”“颜色”“金额”）。值对象是<strong>不可变的</strong>（创建后不能修改），通过“相等性”（如两个“地址”对象的“省”“市”“区”相同则认为相等）和“可替换性”（如用一个新的“地址”对象替换旧的）简化设计。  </li>
+<li><strong>聚合（Aggregate）</strong>：<br>一组<strong>关联的实体与值对象</strong>的集合，作为一个<strong>事务边界</strong>（即一个聚合内的所有操作要么全部成功，要么全部失败）。每个聚合有一个<strong>聚合根</strong>（如“订单”是“订单项”“收货地址”的聚合根），外部只能通过聚合根访问内部对象（如“订单项”不能直接被修改，需通过“订单”的方法修改）。  </li>
+<li><strong>领域服务（Domain Service）</strong>：<br>处理<strong>跨聚合的业务逻辑</strong>（如“计算订单总价”“验证订单有效性”）。领域服务是无状态的，仅协调聚合间的操作，不存储数据。  </li>
+<li><strong>资源库（Repository）</strong>：<br>负责<strong>聚合的持久化与获取</strong>（如“订单Repository”负责从数据库中保存&#x2F;读取“订单”对象）。资源库的接口应定义在领域层，实现放在基础设施层（如用Hibernate实现）。</li>
 </ol>
-<h3 id="2-最佳实践"><a href="#2-最佳实践" class="headerlink" title="2. 最佳实践"></a>2. 最佳实践</h3><ol>
-<li>多媒体文件缩量（本地和远端资源）</li>
-<li>分配优先级按需拉取&#x2F;上传数据</li>
-<li>定位&#x2F;通知&#x2F;屏幕唤醒等耗电管理</li>
-<li>使用性能监控工具（兼容性及性能评分）</li>
+<h4 id="六、与DSL（领域特定语言）的关系"><a href="#六、与DSL（领域特定语言）的关系" class="headerlink" title="六、与DSL（领域特定语言）的关系"></a><strong>六、与DSL（领域特定语言）的关系</strong></h4><p>DSL是DDD的<strong>自然延伸</strong>，两者核心目标一致：<strong>用领域语言解决领域问题</strong>。  </p>
+<ol>
+<li><strong>DSL是领域模型的“代码化”</strong>：<br>DDD的领域模型是<strong>概念模型</strong>（如“用户”“订单”的抽象），而DSL是将这些概念转化为<strong>可执行的代码</strong>（如用SwiftUI定义“订单界面”的DSL，用SQL定义“订单查询”的DSL）。例如，SwiftUI的<code>@State</code>、<code>@Binding</code>等属性就是DSL，用于描述“订单状态”的变化。  </li>
+<li><strong>DSL依赖统一语言</strong>：<br>DSL的语法与词汇应与DDD的<strong>统一语言</strong>一致（如“订单”“用户”等术语在DSL中应与模型中的定义一致）。例如，用SQL定义“订单查询”时，表名应叫<code>orders</code>（对应模型中的“Order”类），字段名应叫<code>user_id</code>（对应“Order”类的<code>userId</code>属性）。  </li>
+<li><strong>DSL简化模型实现</strong>：<br>DSL通过<strong>高阶抽象</strong>（如“订单DSL”中的<code>createOrder()</code>方法）隐藏技术细节（如数据库操作、网络请求），让开发人员专注于业务逻辑。例如，用SQLAlchemy（Python的ORM框架）定义“订单”模型时，<code>Order</code>类的<code>save()</code>方法就是DSL，用于将模型保存到数据库。</li>
 </ol>
-<h3 id="4-性能监控工具"><a href="#4-性能监控工具" class="headerlink" title="4. 性能监控工具"></a>4. 性能监控工具</h3><ol>
-<li>Android Vitals（Crash 和 ANR）</li>
-<li>JankStats Library（帧率、UI状态报告、卡顿报告）</li>
-<li>Benchmark test（CI 流程中集成）</li>
-<li>Android Profiler （内存、CPU、网络、耗电、其他手机资源）</li>
-<li>Firebase Performance Monitoring（记录运行数据，启动耗时、屏幕渲染、网络请求）</li>
-</ol>
-<h3 id="5-挑战与瓶颈"><a href="#5-挑战与瓶颈" class="headerlink" title="5. 挑战与瓶颈"></a>5. 挑战与瓶颈</h3><ol>
-<li>手机设备太过碎片化（厂商、定制操作系统、SDK版本、屏幕尺寸、CPU架构、组网）</li>
-<li>太多Android系统版本需要兼容（6.0~14 存在 11 个版本的SDK）</li>
-<li>功能稳定性测试不足（单元测试、集成测试、自动化测试）</li>
-</ol>
-<h3 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h3><p>应用迭代过程中始终保持稳定运行、高效用户体验，性能优化是不可或缺的一环。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h4><p>《DDD》的核心是<strong>“业务优先”</strong>，通过领域模型、统一语言、战略&#x2F;战术设计，将复杂业务转化为可维护的软件。DSL是DDD的“落地工具”，通过代码化领域模型，让业务逻辑更易表达、更易维护。两者的结合，能有效应对复杂系统的软件设计挑战。</p>
 </div>
         
           <div class="post-copyright">
@@ -291,7 +248,7 @@
                       <span> Author: qomg</span>
                   </div>
                   <div class="copyright-item">
-                      <span> Link: <a href="http://qomg.github.io/2024/09/18/Android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/">http://qomg.github.io/2024/09/18/Android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/</a></span>
+                      <span> Link: <a href="http://qomg.github.io/2025/12/01/Domain-Driven-Design/">http://qomg.github.io/2025/12/01/Domain-Driven-Design/</a></span>
                   </div>
                   <div class="copyright-item">
                       <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
@@ -320,12 +277,12 @@
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/2025/12/01/Clean-Code/" >Clean Code<i class="fa fa-chevron-left"></i></a>
+            <a href="/2025/12/01/Refactoring/" >Refactoring<i class="fa fa-chevron-left"></i></a>
         </div>
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/2024/02/26/BaseViewModel-with-STATE/" >BaseViewModel with STATE<i class="fa fa-chevron-right"></i></a>
+            <a href="/2025/12/01/Design-Patterns/" >Design Patterns<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>

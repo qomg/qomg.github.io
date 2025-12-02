@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="qomg">
+  
+  
+      <meta name="subtitle" content="messy thinking">
+  
+  
+      <meta name="description" content="Stay curious. Keep learning!">
+  
+  
+      <meta name="keywords" content=",developer">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="mind pieces" type="application/atom+xml">
+  
+
+  
+
+  <title>Refactoring | mind pieces</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+</head>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="mind pieces">mind pieces</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/search/ ">
+                            <i class=" fas fa-search-plus " style="color: rgb(3 169 244);"></i>
+                            <span class="layui-nav-item-name">Search</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">Home</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">Archives</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">Tags</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/categories ">
+                            <i class=" far fa-folder-open " style="color: rgb(29 209 161);"></i>
+                            <span class="layui-nav-item-name">Categories</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">About</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/images/2020/07/27/baokemeng.webp" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+    
+            <div class="social">
+                
+                        <a class="social-icon" href="https://github.com/qomg" target="_blank" title="Github">
+                            <i class="iconfont icon-GitHub" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="mailto:yazhanmu@live.cn" target="_blank" title="Email">
+                            <i class="iconfont icon-email" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://steamcommunity.com/id/qomg" target="_blank" title="Steam">
+                            <i class="iconfont icon-steam" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://space.bilibili.com/qomg" target="_blank" title="Bilibili">
+                            <i class="iconfont icon-bilibili" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="https://music.163.com/#/user/home?id=qomg" target="_blank" title="Netmusic">
+                            <i class="iconfont icon-wangyiyunyinle1" aria-hidden="true"></i>
+                          </a>
+                 
+                        <a class="social-icon" href="/atom.xml" target="_blank" title="rss">
+                            <i class="iconfont icon-rss" aria-hidden="true"></i>
+                          </a>
+                 
+            </div>
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Refactoring</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="Created 2025.12.01"><i class="far fa-calendar-alt"></i> 2025.12.01</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="Updated 2025.12.01"><i class="far fa-calendar-check"></i> 2025.12.01</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">2k words</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">7 min</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h3 id="《Refactoring-Improving-the-Design-of-Existing-Code》核心内容总结"><a href="#《Refactoring-Improving-the-Design-of-Existing-Code》核心内容总结" class="headerlink" title="《Refactoring: Improving the Design of Existing Code》核心内容总结"></a>《Refactoring: Improving the Design of Existing Code》核心内容总结</h3><h4 id="一、书籍定位与目标读者"><a href="#一、书籍定位与目标读者" class="headerlink" title="一、书籍定位与目标读者"></a><strong>一、书籍定位与目标读者</strong></h4><p>《Refactoring: Improving the Design of Existing Code》是<strong>Martin Fowler</strong>（马丁·福勒）的经典软件开发书籍，1999年由Addison-Wesley出版（2019年推出20周年纪念版）。其核心目标是帮助开发者<strong>系统性地改善既有代码的设计</strong>，提升代码的可读性、可维护性与扩展性，适合有一定编程经验、希望解决“代码腐化”问题的开发者阅读。</p>
+<h4 id="二、核心概念：重构的定义与价值"><a href="#二、核心概念：重构的定义与价值" class="headerlink" title="二、核心概念：重构的定义与价值"></a><strong>二、核心概念：重构的定义与价值</strong></h4><p><strong>重构（Refactoring）</strong> 是本书的核心主题，定义为：<strong>在不改变代码外在行为的前提下，对代码内部结构进行修改，以提高其可理解性、降低修改成本</strong>。<br>重构的核心价值在于：  </p>
+<ul>
+<li><strong>应对“代码腐化”</strong>：解决重复代码、过长函数、过大类等问题，避免代码变得难以理解和维护；  </li>
+<li><strong>提升可扩展性</strong>：通过优化设计（如提取接口、使用多态），使代码更容易适应需求变化；  </li>
+<li><strong>降低修改成本</strong>：减少因代码结构混乱导致的“霰弹式修改”（修改一处需要改动多处）；  </li>
+<li><strong>改善团队协作</strong>：清晰的代码结构让团队成员更容易理解彼此的工作，减少沟通成本。</li>
+</ul>
+<h4 id="三、重构的时机与原则"><a href="#三、重构的时机与原则" class="headerlink" title="三、重构的时机与原则"></a><strong>三、重构的时机与原则</strong></h4><p><strong>何时重构？</strong>  </p>
+<ul>
+<li><strong>三次原则（Don Roberts准则）</strong>：第一次做某件事时只管去做；第二次做类似的事会产生反感，但仍可接受；第三次再做类似的事，就应该重构；  </li>
+<li><strong>添加新功能前</strong>：重构现有代码，使新功能的添加更简单（如提取公共方法、消除重复代码）；  </li>
+<li><strong>修补bug时</strong>：重构相关代码，避免bug再次出现（如简化复杂条件逻辑）；  </li>
+<li><strong>代码评审时</strong>：通过重构消除代码异味（如过长参数列表、数据泥团），提升代码质量。</li>
+</ul>
+<p><strong>重构的原则</strong>：  </p>
+<ul>
+<li><strong>小步前进</strong>：每次重构只做一小部分，避免大规模修改导致的风险；  </li>
+<li><strong>频繁测试</strong>：重构后立即运行测试，确保代码行为不变；  </li>
+<li><strong>保留接口</strong>：尽量不修改公共接口（如方法签名），避免影响调用方；  </li>
+<li><strong>避免过度设计</strong>：不要为了“完美”而引入不必要的抽象（如过早使用设计模式）。</li>
+</ul>
+<h4 id="四、常见代码“坏味道”与重构手法"><a href="#四、常见代码“坏味道”与重构手法" class="headerlink" title="四、常见代码“坏味道”与重构手法"></a><strong>四、常见代码“坏味道”与重构手法</strong></h4><p>本书详细列举了多种代码“坏味道”（Code Smells），并提供了对应的重构手法（Refactoring Techniques），以下是核心内容：  </p>
+<h5 id="1-重复代码（Duplicated-Code）"><a href="#1-重复代码（Duplicated-Code）" class="headerlink" title="1. 重复代码（Duplicated Code）"></a><strong>1. 重复代码（Duplicated Code）</strong></h5><p><strong>问题</strong>：同一逻辑在多个地方重复（如不同子类的相同方法、不同模块的相同计算逻辑）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>提炼函数（Extract Method）</strong>：将重复代码提取为一个独立函数，通过函数调用替代重复代码；  </li>
+<li><strong>提炼类（Extract Class）</strong>：如果重复代码涉及多个方法或字段，提取为一个新类，通过组合替代继承；  </li>
+<li><strong>模板方法模式</strong>：如果重复代码有相似结构但细节不同，使用模板方法（父类定义算法骨架，子类实现具体步骤）。</li>
+</ul>
+<h5 id="2-过长函数（Long-Method）"><a href="#2-过长函数（Long-Method）" class="headerlink" title="2. 过长函数（Long Method）"></a><strong>2. 过长函数（Long Method）</strong></h5><p><strong>问题</strong>：函数过长（通常超过20行），难以理解其意图。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>提炼函数（Extract Method）</strong>：将函数中的逻辑块（如循环、条件判断）提取为独立函数；  </li>
+<li><strong>分解条件表达式（Decompose Conditional）</strong>：将复杂的if-else或switch语句拆分为多个小函数；  </li>
+<li><strong>以查询取代临时变量（Replace Temp with Query）</strong>：将临时变量（如计算结果）替换为函数调用，减少函数参数。</li>
+</ul>
+<h5 id="3-过长参数列表（Long-Parameter-List）"><a href="#3-过长参数列表（Long-Parameter-List）" class="headerlink" title="3. 过长参数列表（Long Parameter List）"></a><strong>3. 过长参数列表（Long Parameter List）</strong></h5><p><strong>问题</strong>：函数参数过多（通常超过3个），难以理解和维护。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>引入参数对象（Introduce Parameter Object）</strong>：将相关参数封装为一个对象（如<code>OrderDetails</code>），通过对象传递参数；  </li>
+<li><strong>以函数取代参数（Replace Parameter with Methods）</strong>：如果参数是某个对象的属性，直接调用该对象的方法获取值；  </li>
+<li><strong>保持对象完整（Preserve Whole Object）</strong>：如果参数是某个对象的部分属性，直接传递整个对象。</li>
+</ul>
+<h5 id="4-过大类（Large-Class）"><a href="#4-过大类（Large-Class）" class="headerlink" title="4. 过大类（Large Class）"></a><strong>4. 过大类（Large Class）</strong></h5><p><strong>问题</strong>：类包含过多字段或方法，职责不单一（如“上帝类”）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>提炼类（Extract Class）</strong>：将类的部分职责提取为新类（如将“订单处理”和“库存管理”分离）；  </li>
+<li><strong>提炼子类（Extract Subclass）</strong>：如果类的部分行为只适用于特定场景，提取为子类（如<code>RegularOrder</code>和<code>VIPOrder</code>）；  </li>
+<li><strong>接口隔离（Interface Segregation）</strong>：如果类实现了多个不相关的接口，将其拆分为多个小接口。</li>
+</ul>
+<h5 id="5-发散式变化（Divergent-Change）"><a href="#5-发散式变化（Divergent-Change）" class="headerlink" title="5. 发散式变化（Divergent Change）"></a><strong>5. 发散式变化（Divergent Change）</strong></h5><p><strong>问题</strong>：一个类因不同原因频繁修改（如“订单类”既修改价格计算逻辑，又修改库存逻辑）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>提炼类（Extract Class）</strong>：将不同职责的代码分离到不同类中（如<code>PriceCalculator</code>和<code>InventoryManager</code>）；  </li>
+<li><strong>细粒度化（Split Responsibility）</strong>：将类的方法拆分为更小的、单一职责的方法。</li>
+</ul>
+<h5 id="6-霰弹式修改（Shotgun-Surgery）"><a href="#6-霰弹式修改（Shotgun-Surgery）" class="headerlink" title="6. 霰弹式修改（Shotgun Surgery）"></a><strong>6. 霰弹式修改（Shotgun Surgery）</strong></h5><p><strong>问题</strong>：修改一个功能需要改动多个类（如“修改订单状态”需要修改<code>Order</code>、<code>Inventory</code>、<code>Payment</code>等多个类）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>搬移函数（Move Method）</strong>：将相关方法从分散的类移动到同一个类中（如将“计算订单总价”方法从<code>Order</code>移动到<code>OrderCalculator</code>）；  </li>
+<li><strong>收敛类（Consolidate Class）</strong>：将分散的类合并为一个类，减少类之间的依赖。</li>
+</ul>
+<h5 id="7-依恋情结（Feature-Envy）"><a href="#7-依恋情结（Feature-Envy）" class="headerlink" title="7. 依恋情结（Feature Envy）"></a><strong>7. 依恋情结（Feature Envy）</strong></h5><p><strong>问题</strong>：一个类的方法过度依赖另一个类的数据（如<code>Order</code>类频繁访问<code>Customer</code>类的<code>address</code>字段）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>搬移函数（Move Method）</strong>：将依赖其他类数据的方法移动到该类中（如将“获取客户地址”的方法从<code>Order</code>移动到<code>Customer</code>）；  </li>
+<li><strong>隐藏委托关系（Hide Delegate）</strong>：通过代理模式隐藏类之间的委托关系（如<code>Order</code>类通过<code>Customer</code>类的代理获取地址）。</li>
+</ul>
+<h5 id="8-数据泥团（Data-Clumps）"><a href="#8-数据泥团（Data-Clumps）" class="headerlink" title="8. 数据泥团（Data Clumps）"></a><strong>8. 数据泥团（Data Clumps）</strong></h5><p><strong>问题</strong>：相同的数据在多个地方重复出现（如<code>name</code>、<code>address</code>、<code>phone</code>在多个类中重复）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>提炼类（Extract Class）</strong>：将数据封装为一个对象（如<code>CustomerInfo</code>），通过对象传递数据；  </li>
+<li><strong>以函数取代参数（Replace Parameter with Methods）</strong>：如果数据是某个对象的属性，直接调用该对象的方法获取值。</li>
+</ul>
+<h5 id="9-基本类型偏执（Primitive-Obsession）"><a href="#9-基本类型偏执（Primitive-Obsession）" class="headerlink" title="9. 基本类型偏执（Primitive Obsession）"></a><strong>9. 基本类型偏执（Primitive Obsession）</strong></h5><p><strong>问题</strong>：使用基本类型（如<code>int</code>、<code>String</code>）代替对象，导致代码冗余（如用<code>int</code>表示“性别”，用<code>String</code>表示“地址”）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>以对象取代基本类型（Replace Data Value with Object）</strong>：将基本类型封装为对象（如<code>Gender</code>、<code>Address</code>），通过对象的方法处理数据；  </li>
+<li><strong>枚举类型（Enum）</strong>：如果基本类型表示有限集合（如性别、状态），使用枚举类型替代。</li>
+</ul>
+<h5 id="10-switch语句过多（Switch-Statements）"><a href="#10-switch语句过多（Switch-Statements）" class="headerlink" title="10. switch语句过多（Switch Statements）"></a><strong>10. switch语句过多（Switch Statements）</strong></h5><p><strong>问题</strong>：大量使用switch语句处理多分支逻辑（如根据订单类型计算价格）。<br><strong>重构手法</strong>：  </p>
+<ul>
+<li><strong>多态（Polymorphism）</strong>：用子类替代switch语句（如<code>Order</code>类的子类<code>RegularOrder</code>、<code>VIPOrder</code>实现各自的<code>calculatePrice</code>方法）；  </li>
+<li><strong>策略模式（Strategy Pattern）</strong>：将分支逻辑封装为独立的策略类，通过上下文类选择策略。</li>
+</ul>
+<h4 id="五、重构的实践建议"><a href="#五、重构的实践建议" class="headerlink" title="五、重构的实践建议"></a><strong>五、重构的实践建议</strong></h4><ul>
+<li><strong>建立测试体系</strong>：重构前确保有完善的单元测试，重构后立即运行测试，避免引入bug；  </li>
+<li><strong>使用自动化工具</strong>：利用IDE（如IntelliJ IDEA、Eclipse）的重构工具（如“Extract Method”“Rename”），减少手动修改的错误；  </li>
+<li><strong>遵循命名规范</strong>：函数名应清晰表达其意图（如<code>calculateTotalPrice</code>比<code>calc</code>更易理解）；  </li>
+<li><strong>避免过度重构</strong>：不要为了“完美”而重构，优先解决影响当前开发的问题。</li>
+</ul>
+<h4 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a><strong>六、总结</strong></h4><p>《Refactoring: Improving the Design of Existing Code》是软件开发领域的经典之作，其核心思想是“通过重构改善代码设计，而非通过重写解决所有问题”。书中提供的重构手法和“坏味道”识别技巧，是开发者应对“代码腐化”的有力武器。通过持续重构，开发者可以保持代码的健康状态，提升开发效率，降低维护成本。</p>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> Author: qomg</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> Link: <a href="http://qomg.github.io/2025/12/01/Refactoring/">http://qomg.github.io/2025/12/01/Refactoring/</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> License: 本博客所有文章除特别声明外，均采用许可协议 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> 转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+  <div class="share-reward">
+    <div class="share">
+        
+<div class="social-share" data-sites="facebook,twitter,wechat,weibo,qq"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+
+
+      </div>
+        <div class="reward">
+          
+        </div>
+    </div>
+    
+    <div class="post_tags">
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2025/12/01/Test-Driven-Development/" >Test Driven Development<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/2025/12/01/Domain-Driven-Design/" >Domain Driven Design<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+  <div id="valine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  <script>
+        new Valine({
+          el: '#valine',
+          appId: "1jwbsn4C9mzsuGTV2X3ge3uX-gzGzoHsz",
+          appKey: "8ibZIVDCnlmAVsDdPi2D1wWP",
+          avatar: "mm",
+          lang: "",
+          meta: 'nick,mail,link'.split(','),
+          requiredFields: 'nick,mail'.split(','),
+          placeholder: "评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒",
+          pageSize:'10',
+          recordIP: 'true',
+          serverURLs: "",
+          emojiCDN: "",
+          enableQQ: "true",
+        });
+  </script>
+  
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> qomg 
+        <br>
+        Powered by 
+        <a target="_blank" rel="noopener" href="http://hexo.io">hexo</a> | Theme is <a target="_blank" rel="noopener" href="https://github.com/a2396837/hexo-theme-blank/">blank</a>
+        
+          <div class="icp-info">
+            
+          <a href="" target="_blank"> </a>
+        </div>
+        
+    </div>  
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+
+
+</html>
