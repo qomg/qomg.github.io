@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qomg.github.io/2025/12/16/dataclasses-attrs-pydantic/</loc>
+    
+    <lastmod>2025-12-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://qomg.github.io/2025/12/01/Working-Effectively-with-Legacy-Code/</loc>
     
     <lastmod>2025-12-01</lastmod>
@@ -247,14 +254,14 @@
   </url>
   
   <url>
-    <loc>http://qomg.github.io/search/index.html</loc>
+    <loc>http://qomg.github.io/tags/index.html</loc>
     
     <lastmod>2023-02-09</lastmod>
     
   </url>
   
   <url>
-    <loc>http://qomg.github.io/tags/index.html</loc>
+    <loc>http://qomg.github.io/search/index.html</loc>
     
     <lastmod>2023-02-09</lastmod>
     
@@ -284,148 +291,148 @@
 
   <url>
     <loc>http://qomg.github.io/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://qomg.github.io/tags/Annotation/</loc>
-    <lastmod>2025-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://qomg.github.io/tags/Pin/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/EditText/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://qomg.github.io/tags/Annotation/</loc>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/bitmap/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/watermark/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/clip/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/ViewModel/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/ViewState/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/ume/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/commit-message/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/UUID/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/fastlane/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/tools-ns/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/clean/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/gc/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/emoji/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/gradle/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/dependency/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/resolutionStrategy/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/tags/mlkit/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -434,42 +441,42 @@
   
   <url>
     <loc>http://qomg.github.io/categories/Android/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/flutter/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/Git/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/SQL-Server/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/gitlab/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://qomg.github.io/categories/Gradle/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
