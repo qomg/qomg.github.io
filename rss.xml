@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>mind pieces</title><description>mind pieces — messy thinking. Stay curious. Keep learning!</description><link>https://horace-su.github.io/</link><item><title>adb snapshot</title><link>https://horace-su.github.io/posts/adb-snapshot/</link><guid isPermaLink="true">https://horace-su.github.io/posts/adb-snapshot/</guid><description>&lt;!-- more --&gt;</description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>Android Annotation</title><link>https://horace-su.github.io/posts/android-annotation/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-annotation/</guid><description>Android注解收集
+[官方说明](https://developer.android.google.cn/studio/write/annotations?hl=zh-cn)
+@Nullable @NonNull
+&lt;!-- more --&gt;
+@StringRes @IdRes @Draw</description><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate></item><item><title>Android bitmap add watermark</title><link>https://horace-su.github.io/posts/android-bitmap-add-watermark/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-bitmap-add-watermark/</guid><description>A post about Android-bitmap-add-watermark</description><pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate></item><item><title>Android bitmap trim white</title><link>https://horace-su.github.io/posts/android-bitmap-trim-white/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-bitmap-trim-white/</guid><description>A post about Android-bitmap-trim-white</description><pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate></item><item><title>android clean architecture</title><link>https://horace-su.github.io/posts/android-clean-architecture/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-clean-architecture/</guid><description>[Android-Kotlin-Clean-Architecture](https://github.com/sanogueralorenzo/Android-Kotlin-Clean-Architecture)
+* Maintainance of the project gets easierW</description><pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate></item><item><title>android fastlane</title><link>https://horace-su.github.io/posts/android-fastlane/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-fastlane/</guid><description>[fastlane gradle](https://docs.fastlane.tools/actions/gradle/)
+[build android app](https://docs.fastlane.tools/actions/build_android_app/)
+fastlane </description><pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate></item><item><title>Android PinEntryEditText</title><link>https://horace-su.github.io/posts/android-pinentryedittext/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-pinentryedittext/</guid><description>A post about Android-PinEntryEditText</description><pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate></item><item><title>android tools namespace</title><link>https://horace-su.github.io/posts/android-tools-namespace/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android-tools-namespace/</guid><description>[官方讲解](https://developer.android.google.cn/studio/write/tool-attributes?hl=zh-cn)
+
+
+tools:node=&quot;merge&quot; 全部合并 tools:node=&quot;merge-only-attributes&quot; 仅合并属性，</description><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate></item><item><title>Android课题研究</title><link>https://horace-su.github.io/posts/android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/</link><guid isPermaLink="true">https://horace-su.github.io/posts/android%E8%AF%BE%E9%A2%98%E7%A0%94%E7%A9%B6/</guid><description>MVP 即 Minimum Viable Product，通过做出能满足最基本功能的产品，不断接受用户反馈，快速迭代，直到做出真正符合需求的好产品。
+
+
+1. 对源码进行依赖分析、静态检查、自动化重构，构建合理的组件/模块化方案 2. 编写Gradle/AS插件，在编译时优化构建及插桩处理 3. </description><pubDate>Wed, 18 Sep 2024 00:00:00 GMT</pubDate></item><item><title>BaseViewModel with STATE</title><link>https://horace-su.github.io/posts/baseviewmodel-with-state/</link><guid isPermaLink="true">https://horace-su.github.io/posts/baseviewmodel-with-state/</guid><description>A post about BaseViewModel-with-STATE</description><pubDate>Mon, 26 Feb 2024 00:00:00 GMT</pubDate></item><item><title>chinese copywriting tutorial</title><link>https://horace-su.github.io/posts/chinese-copywriting-tutorial/</link><guid isPermaLink="true">https://horace-su.github.io/posts/chinese-copywriting-tutorial/</guid><description>统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
+* * *
+
+
+&gt; 「有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时地留白</description><pubDate>Sat, 15 Apr 2023 00:00:00 GMT</pubDate></item><item><title>Clean Code</title><link>https://horace-su.github.io/posts/clean-code/</link><guid isPermaLink="true">https://horace-su.github.io/posts/clean-code/</guid><description>整洁代码是**简单、直接、能清晰传达意图**的代码，是专业开发者的标志。其核心特征包括：   - **可读性**：像散文一样易读，无需额外注释即可理解逻辑；   - **单一职责**：每个函数/类只做一件事，避免“上帝类”；   - **无重复代码**：遵循DRY（Don’t Repeat Your</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>clean .git folder</title><link>https://horace-su.github.io/posts/clean-git-folder/</link><guid isPermaLink="true">https://horace-su.github.io/posts/clean-git-folder/</guid><description>clean .git folder</description><pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate></item><item><title>Coding Interview</title><link>https://horace-su.github.io/posts/coding-interview/</link><guid isPermaLink="true">https://horace-su.github.io/posts/coding-interview/</guid><description>《Cracking the Coding Interview: 189 Programming Questions and Solutions》（以下简称《Cracking the Coding Interview》）是**Gayle Laakmann McDowell**（盖尔·拉夫曼·麦克道尔）</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>flutter ume custom plugin</title><link>https://horace-su.github.io/posts/custom-plugin/</link><guid isPermaLink="true">https://horace-su.github.io/posts/custom-plugin/</guid><description>1. `flutter create -t package flutter_ume_kit_analysis` 创建一个插件包 2. 修改插件包的 `pubspec.yaml`，添加依赖
+
+
+&lt;!-- more --&gt;
+3. 创建插件配置，实现 `Pluggable` 虚类
+
+</description><pubDate>Sun, 14 Nov 2021 00:00:00 GMT</pubDate></item><item><title>dataclasses-attrs-pydantic</title><link>https://horace-su.github.io/posts/dataclasses-attrs-pydantic/</link><guid isPermaLink="true">https://horace-su.github.io/posts/dataclasses-attrs-pydantic/</guid><description>分类：数据科学 • 阅读时间：6分钟
+Python 3.7引入了dataclasses，这是一个方便的装饰器，可以使创建类变得更加容易和无缝。本文将比较普通类、&quot;dataclass&quot;和使用attrs的类。Dataclasses基于attrs开发，attrs是一个Python包，同样旨在使创建类变得</description><pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Design Patterns</title><link>https://horace-su.github.io/posts/design-patterns/</link><guid isPermaLink="true">https://horace-su.github.io/posts/design-patterns/</guid><description>《Design Patterns: Elements of Reusable Object-Oriented Software》（以下简称《Design Patterns》）是**Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides**（四人合称</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Docker run MSSQL Server Linux</title><link>https://horace-su.github.io/posts/docker-run-mssql-server-linux/</link><guid isPermaLink="true">https://horace-su.github.io/posts/docker-run-mssql-server-linux/</guid><description>&lt;!-- more --&gt;
+
+
+__dont modify below string &lt;YourStrong!PasswOrd&gt;__
+
+
+
+
+
+__you should replace YourNewStrong!PasswOrd with your password__
+
+
+
+
+
+
+
+
+
+
+</description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>Domain Driven Design</title><link>https://horace-su.github.io/posts/domain-driven-design/</link><guid isPermaLink="true">https://horace-su.github.io/posts/domain-driven-design/</guid><description>《Domain-Driven Design: Tackling Complexity in the Heart of Software》（以下简称《DDD》）是Eric Evans于2004年提出的**领域驱动设计（Domain-Driven Design, DDD）**经典著作，核心目标是解决**</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Flutter进阶学习</title><link>https://horace-su.github.io/posts/flutter-learning/</link><guid isPermaLink="true">https://horace-su.github.io/posts/flutter-learning/</guid><description>学习 [Flutter SDK](https://api.flutter.dev/)
+&lt;!--more--&gt;
+
+
+
+
+
+
+
+
+
+[官方示例代码库](https://flutter.github.io/samples/#)
+
+
+
+
+* 模块化开发 flutter_modular * 权限 per</description><pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate></item><item><title>Flutter UME tutorial</title><link>https://horace-su.github.io/posts/flutter-ume-tutorial/</link><guid isPermaLink="true">https://horace-su.github.io/posts/flutter-ume-tutorial/</guid><description>![](/images/ume-banner.png)
+&lt;!-- more --&gt;
+
+
+Pub 地址：
+[https://pub.dev/packages/flutter_ume](https://pub.dev/packages/flutter_ume) [https://pub.flutt</description><pubDate>Sun, 14 Nov 2021 00:00:00 GMT</pubDate></item><item><title>Git commit message</title><link>https://horace-su.github.io/posts/git-commit-message/</link><guid isPermaLink="true">https://horace-su.github.io/posts/git-commit-message/</guid><description>|name| description| |---| ---| |feat| 新功能（feature）| |fix |修复bug| |docs |仅仅修改了文档（documentation）| |style| 仅仅是对格式进行修改，如逗号、缩进、空格等。不改变代码逻辑| |refactor| 重构（即</description><pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate></item><item><title>gitlab - use emoji in commit message</title><link>https://horace-su.github.io/posts/gitlab-emoji/</link><guid isPermaLink="true">https://horace-su.github.io/posts/gitlab-emoji/</guid><description>&lt;!-- more --&gt;
+
+
+初次提交
+
+
+
+
+| emoji| emoji 代码| commit 说明 | | ----------- | ----------- | ----------- | | :art: (调色板) |:art: |改进代码结构/代码格式 | | :fire: (火焰</description><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate></item><item><title>gradle resolution rules</title><link>https://horace-su.github.io/posts/gradle-resolution-rules/</link><guid isPermaLink="true">https://horace-su.github.io/posts/gradle-resolution-rules/</guid><description>Customizing resolution of a dependency directly</description><pubDate>Sun, 16 Apr 2023 00:00:00 GMT</pubDate></item><item><title>IDEA Jetty</title><link>https://horace-su.github.io/posts/idea-jetty/</link><guid isPermaLink="true">https://horace-su.github.io/posts/idea-jetty/</guid><description>&lt;!-- more --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&gt; 确保 pom.xml 里面有依赖 com.microsoft.sqlserver.jdbc.SQLServerDriver 等数据库连接</description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>Kotlin functions</title><link>https://horace-su.github.io/posts/kotlin-functions/</link><guid isPermaLink="true">https://horace-su.github.io/posts/kotlin-functions/</guid><description>* 1、function member
+
+
+&lt;!-- more --&gt;
+* 2、nullable function
+
+
+* 3、function type
+
+
+* 4、anonymous function
+
+
+* 5、lamda expression
+
+
+* 6、callable ref</description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>macosx snippets</title><link>https://horace-su.github.io/posts/macosx-snippets/</link><guid isPermaLink="true">https://horace-su.github.io/posts/macosx-snippets/</guid><description>| 按键       | 描述                                   | | ---------- | -------------------------------------- | | 空格键     | 预览                            </description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>ml-kit</title><link>https://horace-su.github.io/posts/ml-kit/</link><guid isPermaLink="true">https://horace-su.github.io/posts/ml-kit/</guid><description>rootDir/build.gradle
+
+
+&lt;!-- more --&gt;
+module/build.gradle 
+
+
+
+
+
+BarcodeScannerProcessor.kt
+
+
+
+
+
+
+
+TODO 待补充</description><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate></item><item><title>nowinandroid</title><link>https://horace-su.github.io/posts/nowinandroid/</link><guid isPermaLink="true">https://horace-su.github.io/posts/nowinandroid/</guid><description>* 全部 Kotlin 代码 (包括 Gradle 脚本) * 使用 [Jetpack Compose](https://developer.android.com/jetpack/compose?hl=zh-cn) 构建 UI * 采用 [Material 3](https://m3.materi</description><pubDate>Fri, 07 Apr 2023 00:00:00 GMT</pubDate></item><item><title>projectDependencyGraph</title><link>https://horace-su.github.io/posts/projectdependencygraph/</link><guid isPermaLink="true">https://horace-su.github.io/posts/projectdependencygraph/</guid><description>projectDependencyGraph.gradle</description><pubDate>Thu, 06 Apr 2023 00:00:00 GMT</pubDate></item><item><title>Refactoring</title><link>https://horace-su.github.io/posts/refactoring/</link><guid isPermaLink="true">https://horace-su.github.io/posts/refactoring/</guid><description>《Refactoring: Improving the Design of Existing Code》是**Martin Fowler**（马丁·福勒）的经典软件开发书籍，1999年由Addison-Wesley出版（2019年推出20周年纪念版）。其核心目标是帮助开发者**系统性地改善既有代码的</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>SQL Server Migration</title><link>https://horace-su.github.io/posts/sql-server-migration/</link><guid isPermaLink="true">https://horace-su.github.io/posts/sql-server-migration/</guid><description>[sp-addlinkedserver](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql?view=sql-serve</description><pubDate>Wed, 14 Nov 2018 00:00:00 GMT</pubDate></item><item><title>SQL Server UUID</title><link>https://horace-su.github.io/posts/sqlserveruuid/</link><guid isPermaLink="true">https://horace-su.github.io/posts/sqlserveruuid/</guid><description>A post about SQLServerUUID</description><pubDate>Tue, 29 Dec 2020 00:00:00 GMT</pubDate></item><item><title>Test Driven Development</title><link>https://horace-su.github.io/posts/test-driven-development/</link><guid isPermaLink="true">https://horace-su.github.io/posts/test-driven-development/</guid><description>《Test-Driven Development: By Example》是**Kent Beck**（肯特·贝克）的经典测试驱动开发（TDD）著作，2003年出版，是TDD领域的奠基之作。其核心目标是**通过“测试先行”的开发模式，帮助开发者编写更健壮、可维护的代码**，同时解决传统开发中“先写代</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>The Mythical Man Month</title><link>https://horace-su.github.io/posts/the-mythical-man-month/</link><guid isPermaLink="true">https://horace-su.github.io/posts/the-mythical-man-month/</guid><description>《人月神话》（*The Mythical Man-Month: Essays on Software Engineering*）是**Frederick P. Brooks, Jr.**（弗雷德里克·布鲁克斯）的经典软件工程著作，1975年首次出版，1995年推出20周年纪念版（新增《没有银弹》等章</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>The Pragmatic Programmer</title><link>https://horace-su.github.io/posts/the-pragmatic-programmer/</link><guid isPermaLink="true">https://horace-su.github.io/posts/the-pragmatic-programmer/</guid><description>《The Pragmatic Programmer: From Journeyman to Master》是**Andrew Hunt**和**David Thomas**合著的经典软件开发书籍，1999年由Addison-Wesley出版（2019年推出20周年纪念版）。其核心目标是帮助程序员**</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>Working Effectively with Legacy Code</title><link>https://horace-su.github.io/posts/working-effectively-with-legacy-code/</link><guid isPermaLink="true">https://horace-su.github.io/posts/working-effectively-with-legacy-code/</guid><description>《Working Effectively with Legacy Code》（以下简称《Working Effectively with Legacy Code》）是**Michael C. Feathers**的经典著作，2004年由Prentice Hall出版，是**遗留代码处理领域的奠基之作</description><pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate></item><item><title>如何不靠运气变得富有</title><link>https://horace-su.github.io/posts/%E5%A6%82%E4%BD%95%E4%B8%8D%E9%9D%A0%E8%BF%90%E6%B0%94%E5%8F%98%E5%BE%97%E5%AF%8C%E6%9C%89/</link><guid isPermaLink="true">https://horace-su.github.io/posts/%E5%A6%82%E4%BD%95%E4%B8%8D%E9%9D%A0%E8%BF%90%E6%B0%94%E5%8F%98%E5%BE%97%E5%AF%8C%E6%9C%89/</guid><description>&gt; Naval 是美国风险投资家，这是他的3小时长播客《如何不靠运气变得富有》的中文翻译，介绍了他的财富观，非常值得一读。
+
+
+Nivi：你可能听说过Naval在推特上进行的那一波主题为“如何在不只依靠运气的情况下致富”的推特风暴（tweetstorm）。我们借助这个播客回顾大部分的推文，给Nav</description><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate></item><item><title>改善人际关系的产品</title><link>https://horace-su.github.io/posts/%E6%94%B9%E5%96%84%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E7%9A%84%E4%BA%A7%E5%93%81/</link><guid isPermaLink="true">https://horace-su.github.io/posts/%E6%94%B9%E5%96%84%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB%E7%9A%84%E4%BA%A7%E5%93%81/</guid><description>这是一个极具潜力的方向。改善人际关系的产品，核心是**解决人与人之间的连接、理解与协作问题**。它不是简单的社交工具，而是融合了心理学、行为设计和技术杠杆的“**关系增强器**”。
+以下是一个系统的产品构思框架，从理念到具体形态，并融入Naval关于“边缘知识”和“提供社会不知如何获得之物”的思想</description><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate></item><item><title>让人们准确找到他们想要的东西</title><link>https://horace-su.github.io/posts/%E8%AE%A9%E4%BA%BA%E4%BB%AC%E5%87%86%E7%A1%AE%E6%89%BE%E5%88%B0%E4%BB%96%E4%BB%AC%E6%83%B3%E8%A6%81%E7%9A%84%E4%B8%9C%E8%A5%BF/</link><guid isPermaLink="true">https://horace-su.github.io/posts/%E8%AE%A9%E4%BA%BA%E4%BB%AC%E5%87%86%E7%A1%AE%E6%89%BE%E5%88%B0%E4%BB%96%E4%BB%AC%E6%83%B3%E8%A6%81%E7%9A%84%E4%B8%9C%E8%A5%BF/</guid><description>这是一个关于如何帮助用户准确找到他们想要的内容的探讨</description><pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate></item><item><title>识别消费成本</title><link>https://horace-su.github.io/posts/%E8%AF%86%E5%88%AB%E6%B6%88%E8%B4%B9%E6%88%90%E6%9C%AC/</link><guid isPermaLink="true">https://horace-su.github.io/posts/%E8%AF%86%E5%88%AB%E6%B6%88%E8%B4%B9%E6%88%90%E6%9C%AC/</guid><description>探讨现代消费者如何构建防御性认知体系来识别消费成本</description><pubDate>Fri, 19 Dec 2025 00:00:00 GMT</pubDate></item><item><title>购物决策系统</title><link>https://horace-su.github.io/posts/%E8%B4%AD%E7%89%A9%E5%86%B3%E7%AD%96%E7%B3%BB%E7%BB%9F/</link><guid isPermaLink="true">https://horace-su.github.io/posts/%E8%B4%AD%E7%89%A9%E5%86%B3%E7%AD%96%E7%B3%BB%E7%BB%9F/</guid><description>将“历史价格查询”、“图片反查”、“品牌名单”这三项极具实战价值的工具结合起来，构建一个高效、可循环的 **“购物决策闭环系统”**。这个系统能显著降低“识别成本”，让“购买优质耐用品”从理想变为可执行的流程。
+下图清晰地展示了这三项工具如何环环相扣，形成一个强大的决策闭环：
+
+
+下面我们来详细</description><pubDate>Fri, 19 Dec 2025 00:00:00 GMT</pubDate></item></channel></rss>
